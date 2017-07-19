@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" [
+    <!ENTITY WebLog.Path    "@server.web.log.dir@">
+    <!ENTITY SqlLog.Path    "@server.sql.log.dir@">
+]>
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+    <appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="&WebLog.Path;/ham-service.log" />
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="10"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} %-5p %c %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender" >
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} %-5p %c %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="SOASERVICE_INFOLOG" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="&WebLog.Path;/soa-service-info.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <param name="Append" value="true"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} %-5p %c %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="ACCESSLOG" class="org.apache.log4j.FileAppender">
+         <param name="File" value="&WebLog.Path;/general.log" />
+         <layout class="org.apache.log4j.PatternLayout">
+              <param name="ConversionPattern" value="%m%n" />
+         </layout>
+    </appender>
+
+    <appender name="ACCESSLOG_INVALIDLOG" class="org.apache.log4j.FileAppender">
+         <param name="File" value="&WebLog.Path;/invalid_general.log" />
+         <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%m%n" />
+         </layout>
+    </appender>
+
+    <appender name="ForSQLLog" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="&SqlLog.Path;/ham-sql.log" />
+            <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+            <layout class="org.apache.log4j.PatternLayout">
+                <param name="ConversionPattern" value="[SQL_LOG] %d{ISO8601} %m%n" />
+            </layout>
+    </appender>
+
+    <category name="jp.co.isid.soa" additivity="false">
+        <priority value="info"/>
+        <appender-ref ref="SOASERVICE_INFOLOG"/>
+    </category>
+
+    <category name="soa.accessLog" additivity="false">
+        <priority value="debug" />
+        <appender-ref ref="ACCESSLOG"/>
+    </category>
+
+    <category name="soa.invalidLog" additivity="false">
+        <priority value="debug" />
+        <appender-ref ref="ACCESSLOG_INVALIDLOG"/>
+    </category>
+
+    <logger name="nj.sqllog">
+        <level value="debug"/>
+        <appender-ref ref="ForSQLLog"/>
+    </logger>
+
+    <root>
+        <level value="DEBUG" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</log4j:configuration>

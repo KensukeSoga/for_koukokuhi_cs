@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+
+<project basedir="." default="war">
+
+    <property file="build.properties" />
+    <!-- ***** デプロイ時更新箇所 START ***** -->
+    <!-- 総合環境 -->
+    <!--
+    <property name="deploy.ver" value="1.0.12.10"/>
+    <property name="deploy.env" value="itst"/>
+    -->
+    <!-- 本番環境 -->
+    <property name="deploy.ver" value="1.0.13.0"/>
+    <property name="deploy.env" value="honban"/>
+  <!-- ***** デプロイ時更新箇所 END ***** -->
+
+    <property name="src.java.dir" value="src"/>
+    <property name="src.webapp.dir" value="WebContent"/>
+    <property name="lib.dir" value="WebContent/WEB-INF/lib"/>
+    <property name="target.dir" value="target"/>
+    <property name="target.classes.dir" value="target/classes"/>
+    <property name="target.dist.dir" value="target/dist"/>
+    <property name="target.api-docs.dir" value="api-docs"/>
+
+    <path id="compile.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="${CATALINA_HOME}/lib">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="init">
+        <tstamp>
+            <format property="build.date" pattern="yyyyMMdd.HHmmss"/>
+        </tstamp>
+    </target>
+
+    <target name="compile" depends="clean, init">
+        <mkdir dir="${target.classes.dir}"/>
+
+        <javac srcdir="${src.java.dir}" destdir="${target.classes.dir}"
+            debug="on" optimize="on" deprecation="off" source="${jdk.version}" target="${jdk.version}">
+            <classpath refid="compile.classpath"/>
+        </javac>
+
+        <copy todir="${target.classes.dir}">
+            <fileset dir="${src.java.dir}">
+                <include name="**/*.properties"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="war" depends="compile">
+
+        <antcall target="-is.available.file">
+            <param name="target.file" value="${deploy.dir}/${deploy.env}.env.properties"/>
+        </antcall>
+
+        <mkdir dir="${target.dist.dir}"/>
+
+        <native2ascii encoding="Shift_JIS" src="${deploy.dir}" dest="${target.dir}" includes="${deploy.env}.env.properties"/>
+
+        <property file="${target.dir}/${deploy.env}.env.properties"/>
+        <echo>環境依存プロパティファイル(${target.dir}/${deploy.env}.env.properties)を読み込みました</echo>
+
+        <antcall target="-app.files"/>
+        <antcall target="-meta.files"/>
+        <antcall target="-gather.files"/>
+        <antcall target="-replace.tokens"/>
+        <copy file="${target.dir}/${meta.dir}/PropertyAccess.properties" todir="${target.classes.dir}/${meta.dir}" overwrite="true"/>
+        <antcall target="-copy.other.runtime.files"/>
+
+      <echo>環境依存OK(${target.dir}/${deploy.env}.env.properties)を読み込みました</echo>
+      <war destfile="${target.dist.dir}/${war.name}.war" webxml="${target.dir}/${app.dir}/web.xml">
+            <webinf dir="${target.dir}/${app.dir}" includes="weblogic.xml"/>
+            <classes dir="${target.classes.dir}">
+                <include name="**/*.*"/>
+            </classes>
+            <lib dir="${lib.dir}">
+                <include name="*.jar"/>
+            </lib>
+            <fileset dir="${target.dir}">
+                <include name="${app.dir}/soa-service.xml"/>
+            </fileset>
+            <fileset dir="${src.webapp.dir}">
+                <exclude name="${app.dir}/web.xml"/>
+                <exclude name="${app.dir}/soa-service.xml"/>
+                <exclude name="${app.dir}/lib/**"/>
+            </fileset>
+            <manifest>
+                <attribute name="Weblogic-Application-Version" value="${deploy.ver}"/>
+            </manifest>
+
+        </war>
+    </target>
+
+    <target name="deploy" depends="war,undeploy">
+        <delete dir="${CATALINA_HOME}/webapps/${war.name}"/>
+        <copy todir="${CATALINA_HOME}/webapps"
+            file="${target.dist.dir}/${war.name}.war"/>
+    </target>
+
+    <!-- web.xml、weblogic.xml、soa-service.xml をデプロイ用フォルダに配置します -->
+    <target name="-app.files">
+        <echo>weblogic.xml(${deploy.dir}/${app.dir})を配布ディレクトリ(${target.dir}/${app.dir})にコピーします</echo>
+        <copy overwrite="true" preservelastmodified="true" todir="${target.dir}/${app.dir}">
+            <fileset dir="${deploy.dir}/${app.dir}">
+                <include name="weblogic.xml"/>
+            </fileset>
+        </copy>
+        <echo>web.xml/soa-service.xml(${src.webapp.dir}/${app.dir})を配布ディレクトリ(${target.dir}/${app.dir})にコピーします</echo>
+        <copy overwrite="true" preservelastmodified="true" todir="${target.dir}/${app.dir}">
+            <fileset dir="${src.webapp.dir}/${app.dir}">
+                <include name="web.xml"/>
+                <include name="soa-service.xml"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <!-- PropertyAccess.propertiesをデプロイ用フォルダに配置します -->
+    <target name="-meta.files">
+        <echo>PropertyAccess.properties(${deploy.dir}/${meta.dir})を配布ディレクトリ(${target.dir}/${meta.dir})にコピーします</echo>
+        <copy overwrite="true" preservelastmodified="true" todir="${target.dir}/${meta.dir}">
+            <fileset dir="${deploy.dir}/${meta.dir}"/>
+        </copy>
+    </target>
+
+    <!-- 環境依存するRuntimeをデプロイ用フォルダに配置します -->
+    <target name="-gather.files">
+        <echo>Runtimeディレクトリ(${deploy.dir}/${runtime.dir})を配布ディレクトリ(${target.dist.dir}/${runtime.dir})にコピーします</echo>
+        <copy overwrite="true" preservelastmodified="true" todir="${target.dist.dir}/${runtime.dir}">
+            <fileset dir="${deploy.dir}/${runtime.dir}">
+                <include name="*.xml"/>
+                <include name="${deploy.env}/*.xml"/>
+            </fileset>
+        </copy>
+        <copy overwrite="true" preservelastmodified="true" todir="${target.dist.dir}/${runtime.dir}">
+            <fileset dir="${target.dist.dir}/${runtime.dir}/${deploy.env}."/>
+        </copy>
+        <delete dir="${target.dist.dir}/${runtime.dir}/${deploy.env}."/>
+    </target>
+
+    <target name="-replace.tokens">
+        <echo>環境依存を解決するための文字列置換ルールファイルを生成します</echo>
+        <copy overwrite="true" tofile="${target.dir}/replace.rule">
+            <fileset file="${target.dir}/${deploy.env}.env.properties"/>
+        </copy>
+        <!--コメントを削除-->
+        <replaceregexp file="${target.dir}/replace.rule" match="(#.*)" replace="" byline="true" />
+        <!--キーの両端に@を追加してトークンを作成-->
+        <replaceregexp file="${target.dir}/replace.rule" match="(^[a-z,A-Z,0-9]+[a-z,A-Z,0-9,.,-,_]*)[' ']*=(.*)" replace="@\1@=\2" byline="true" />
+
+        <echo>トークン置換用ルールプロパティファイル(${target.dir}/replace-rule.properties)を置換します</echo>
+        <replace file="${target.dir}/replace.rule" token="REPLACE_BUILD_DATE" value="@build.date@=${build.date}"/>
+
+        <echo>トークン置換用ルールプロパティファイルを使って環境依存部分を置換します</echo>
+        <replace dir="${target.dir}" replacefilterfile="${target.dir}/replace.rule">
+            <include name="**/*.xml"/>
+            <include name="**/PropertyAccess.properties"/>
+            <exclude name="replace.rule"/>
+        </replace>
+    </target>
+
+    <!-- 環境依存しないRuntimeのコピーを行います -->
+    <target name="-copy.other.runtime.files">
+        <copy todir="${target.dist.dir}/${runtime.dir}">
+            <fileset dir="${runtime.dir}">
+                <exclude name="IsParameter.xml"/>
+                <exclude name="log4j.xml"/>
+                <exclude name="SecParameter.xml"/>
+                <exclude name="SecurityParameter.xml"/>
+                <exclude name="SystemParameter.xml"/>
+                <exclude name="HAMParameter.xml"/>
+                <exclude name="Logs/**/*"/>
+                <exclude name="Logs"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="undeploy">
+        <delete dir="${CATALINA_HOME}/webapps/${war.name}"/>
+        <delete file="${CATALINA_HOME}/webapps/${war.name}.war"/>
+    </target>
+
+    <target name="clean">
+        <delete dir="${target.dir}"/>
+    </target>
+
+    <target name="javadoc">
+        <mkdir dir="${target.api-docs.dir}"/>
+
+        <javadoc packagenames="jp.co.isid.ham.*"
+            sourcepath="${src.java.dir}"
+            destdir="${target.api-docs.dir}"
+            source="1.6"
+            author="true"
+            use="true"
+            windowtitle="HAMアプリケーション API">
+
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </javadoc>
+    </target>
+
+    <target name="-is.available.file">
+        <available file="${target.file}" property="file.present"/>
+        <fail message="ファイル(${target.file})が見つかりません。" unless="file.present"/>
+    </target>
+
+</project>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="SHIFT_JIS"?>
+<!DOCTYPE Parameter SYSTEM "Parameter.dtd" [
+    <!ENTITY Runtime.Path    "E:/Runtime/bj/hamRuntime">
+]>
+<Parameter kind="HAM">
+
+    <!-- HAM DB接続情報 -->
+    <Item Name="DBDriver" Value="com.ddtek.jdbc.oracle.OracleDriver"/>
+    <!-- 開発環境  -->
+    <!--
+    <Item Name="DBUrl" Value="jdbc:datadirect:oracle://sdbnt01t.dentsu.co.jp:29204;SID=sham;CodePageOverride=MS932;ConnectionRetryCount=0"/>
+    <Item Name="DBKey" Value="user,password"/>
+    <Item Name="DBParameter" Value="bj_apl9,t_bj_apl9"/>
+    -->
+    <!-- 総合環境  -->
+    <!--
+    <Item Name="DBUrl" Value="jdbc:datadirect:oracle://sdbnt01t.dentsu.co.jp:29204;SID=sham;CodePageOverride=MS932;ConnectionRetryCount=0"/>
+    <Item Name="DBKey" Value="user,password"/>
+    <Item Name="DBParameter" Value="bj_apl1,o11g_bj_apl1"/>
+    -->
+    <!-- 本番環境  -->
+    <Item Name="DBUrl" Value="jdbc:datadirect:oracle://hamwo10.dentsu.co.jp:29442;SID=hams;CodePageOverride=MS932;ConnectionRetryCount=0"/>
+    <Item Name="DBKey" Value="user,password"/>
+    <Item Name="DBParameter" Value="bj_apl1,ham1lpa"/>
+
+    <!-- 業務会計DB 接続情報 -->
+    <Item Name="ECDBDriver" Value="com.ddtek.jdbc.oracle.OracleDriver"/>
+    <!-- 開発環境 -->
+    <!--
+    <Item Name="ECDBUrl" Value="jdbc:datadirect:oracle://saptg20t.dentsu.co.jp:15292;SID=hd3;CodePageOverride=Windows-31J NOCONVERT;ConnectionRetryCount=0"/>
+    <Item Name="ECDBKey" Value="user,password"/>
+    <Item Name="ECDBParameter" Value="bj_apl300,bj_apl300"/>
+    -->
+    <!-- 総合環境 -->
+    <!--
+    <Item Name="ECDBUrl" Value="jdbc:datadirect:oracle://saptg20s.dentsu.co.jp:15291;SID=hq3;CodePageOverride=Windows-31J NOCONVERT;ConnectionRetryCount=0"/>
+    <Item Name="ECDBKey" Value="user,password"/>
+    <Item Name="ECDBParameter" Value="bj_apl100,bj_apl100"/>
+    -->
+    <!-- 本番環境 -->
+    <Item Name="ECDBUrl" Value="jdbc:datadirect:oracle://saptg20.dentsu.co.jp:27140;SID=DHP;CodePageOverride=Windows-31J NOCONVERT;ConnectionRetryCount=0"/>
+    <Item Name="ECDBKey" Value="user,password"/>
+    <Item Name="ECDBParameter" Value="bj_apl2,dhpbj"/>
+
+    <!-- メール送信サーバー情報 -->
+    <!-- 開発環境 -->
+    <!--
+    <Item Name="SmtpHost" Value = "esqt.dentsu.co.jp"/>
+    <Item Name="SmtpPort" Value = "587"/>
+    -->
+    <!-- 総合環境 -->
+    <!--
+    <Item Name="SmtpHost" Value = "esqt.dentsu.co.jp"/>
+    <Item Name="SmtpPort" Value = "587"/>
+    -->
+    <!-- 本番環境 -->
+    <Item Name="SmtpHost" Value = "mail-hub.dentsu.co.jp"/>
+    <Item Name="SmtpPort" Value = "25"/>
+
+    <!-- Log4j設定ファイル -->
+    <Item Name="Log4jXMLPath" Value="&Runtime.Path;/log4j.xml"/>
+
+    <!-- 検索時禁則文字 -->
+    <Item Name="NGStringList" Value="%,％,_,＿,'"/>
+
+    <!-- サービス共通チェックを行うか（true:する、false：しない） -->
+    <Item Name="ServiceCommonCheck" Value="false"/>
+
+</Parameter>

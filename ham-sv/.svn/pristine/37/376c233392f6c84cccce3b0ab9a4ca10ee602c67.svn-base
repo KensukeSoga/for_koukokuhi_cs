@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE security-definitions>
+
+<security-definitions>
+
+  <!-- 情報システム局の人（admin）: 000 -->
+    <user id="id" password="pass">
+        <items>
+            <item key="cn" value="電通太郎" />
+            <item key="cedESQID" value="id" />
+            <item key="employeenumber" value="I0000" />
+            <item key="sn" value="電通" />
+            <item key="sn;lang-en" value="dentsu taro" />
+            <item key="sn;lang-ja" value="電通" />
+            <item key="sn;lang-ja;phonetic" value="デンツウ タロウ" />
+            <item key="mail" value="id@dentsu.co.jp" />
+            <item key="o" value="iSiD" />
+            <item key="cedpermitaplid" value="DLLAUNCH" />
+            <item key="cedDaichoDate" value="20050725" />
+            <item key="cedCalendarDate" value="20050916" />
+            <item key="employeeType" value="9" />
+            <item key="cedWorkerKubun" value="0" />
+            <item key="cedCCOutKubun" value="1" />
+            <item key="employeeType;ognz" value="1" />
+            <item key="cedMainframesID" value="I0000" />
+            <item key="cedSeikyuDate" value="20050725" />
+            <item key="givenName" value="Taro" />
+            <item key="cedExpireFlg" value="0" />
+            <item key="cedExpirePwdChgKubun" value="false" />
+            <item key="cedExpire1WFlg" value="1" />
+        </items>
+         <profiles>
+            <profile pid="000000" main="true" unitclass="0">
+                <items>
+                <item key="employeeType" value="9" />
+                  <item key="cedInaugurationDate" value="20050512" />
+                  <item key="cedInaugurationDate;tanto" value="20050512" />
+                    <item key="cedOrganizationalUnitCode" value="0000530" />
+                    <item key="cedSapOrganizationUnitCode" value="0000430" />
+                    <item key="ou;abbreviation" value="IT管理部" />
+                    <item key="ou" value="電通グループ電通コーポレート本部情報システム局IT管理部" />
+                    <item key="cedPartnerKubun" value="11" />
+                    <item key="cedOrganizationalUnitCode;cediocd" value="101J010" />
+                    <item key="cedWorkerKubun" value="0" />
+                    <item key="uid" value="id" />
+                    <item key="cedCCOutKubun" value="1" />
+                    <item key="cedTitleClassGroup" value="TCTC000587 社外者グループ" />
+                    <item key="cedOrganizationalUnitCode;cedsikcd" value="0000530" />
+                    <item key="cedResignationDate;tanto" value="20060331" />
+                    <item key="profileType" value="2" />
+                    <item key="cedAssociatesKubun" value="2" />
+                    <item key="cedMainframesID" value="I0000" />
+                    <item key="cedResignationDate" value="20060331" />
+                    <item key="cedPostState" value="0" />
+                </items>
+                <titleclassgroups>
+                    <titleclassgroup id="TCTC000587" name="社外者グループ" />
+                </titleclassgroups>
+           </profile>
+        </profiles>
+
+    </user>
+
+    <!--
+        ================================================================
+        ==テスト用 START ===============================================
+        ================================================================
+    -->
+    <application id="RESEARCHDB">
+
+        <items>
+            <item key="cedApplicationCategory" value="～" />
+            <item key="cn" value="CSFWサンプルアプリ" />
+            <item key="cedSecurityPattern" value="010101" />
+            <item key="cedOrganizationUnitClass" value="0" /> <!-- 組織種別 -->
+            <item key="cedPostState" value="0" /> <!-- 兼務 0:区別する / 1:区別しない -->
+            <item key="cedemergencymessageoutflag" value="0" /> <!-- 代行 0:指定あり(使用可能) / 1:指定なし -->
+            <item key="cedEmergencyMessage" value="このアプリケーションは現在使用できません。" />
+            <item key="cedActingState" value="0" />
+            <item key="cedBusinessCareer" value="0" /> <!-- 組織コードパターン -->
+        </items>
+
+
+      <!-- CSFWサンプルアプリ　利用可能者グループ-->
+      <roles groupid="AS-00000001">
+
+              <!-- 利用可否 アプリケーションの利用可否-->
+              <role category="000" dataType="licensing" priority="010">
+                  <roledata>11</roledata> <!-- 11:利用可 / 00:利用不可 -->
+              </role>
+
+      </roles>
+
+    </application>
+
+    <!--
+        ================================================================
+        ==テスト用 END   ===============================================
+        ================================================================
+    -->
+
+    <!-- ================================================= -->
+    <!-- ================================================= -->
+    <!-- セキュリティグループ -->
+    <!-- ================================================= -->
+    <!-- ================================================= -->
+
+
+    <!-- CSFWサンプルアプリ　利用可能者グループ-->
+    <!-- ***********************************************
+         全員追加してください。
+     *********************************************** -->
+
+    <group id="AS-00000001">
+
+        <userprofile userid="id" pid="000000" />
+
+    </group>
+
+</security-definitions>

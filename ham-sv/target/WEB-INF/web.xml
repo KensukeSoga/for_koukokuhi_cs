@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0"
+    metadata-complete="true">
+
+    <!--
+        SOA Service Framework の設定ファイル名を指定します（必須定義）。
+    -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>WEB-INF/soa-service.xml</param-value>
+    </context-param>
+
+
+    <!--
+        C#クライアント向けメッセージ圧縮フィルタの定義です。
+        C#クライアント向けメッセージ圧縮機能を使用する場合に定義が必要です。
+    -->
+    <filter>
+        <filter-name>GZIPFilter</filter-name>
+        <filter-class>weblogicx.servlet.gzip.filter.GZIPFilter</filter-class>
+    </filter>
+
+    <!--
+        SOA Service Framework 共通処理フィルタの定義です（必須定義）。
+    -->
+    <filter>
+        <filter-name>ServiceFilter</filter-name>
+        <filter-class>jp.co.isid.soa.framework.service.core.ServiceFilter</filter-class>
+    </filter>
+
+
+    <!--
+        C#クライアント向けメッセージ圧縮フィルタのマッピング定義です。
+        C#クライアント向けメッセージ圧縮機能を使用する場合に定義が必要です。
+        Tomcatでは有効にならないため、コメントアウトしてください。
+    <filter-mapping>
+        <filter-name>GZIPFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+    -->
+
+    <!--
+        SOA Service Framework 共通処理フィルタのマッピング定義です（必須定義）。
+    -->
+    <filter-mapping>
+        <filter-name>ServiceFilter</filter-name>
+        <url-pattern>/services/*</url-pattern>
+    </filter-mapping>
+
+
+    <!--
+        サンプルアプリケーションの初期化処理を行うリスナーです。
+        Log4j の設定などを行います。
+    -->
+    <listener>
+        <listener-class>jp.co.isid.ham.base.ApplicationInitializer</listener-class>
+    </listener>
+
+    <!--
+        SOA Service Framework の設定ファイルを読み込むリスナーです。
+        FrameworkInitializer よりも先に定義してください（必須定義）。
+    -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!--
+        SOA Service Framework の初期化処理を行うリスナーです（必須定義）。
+    -->
+    <listener>
+        <listener-class>jp.co.isid.soa.framework.service.core.FrameworkInitializer</listener-class>
+    </listener>
+
+
+    <!--
+        WebサービスのWSDLとエンドポイントを提供するサーブレット定義です（必須定義）。
+    -->
+    <servlet>
+        <servlet-name>CXFServlet</servlet-name>
+        <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!--
+        WebサービスのWSDLとエンドポイントを提供するサーブレットのマッピング定義です（必須定義）。
+    -->
+    <servlet-mapping>
+        <servlet-name>CXFServlet</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
