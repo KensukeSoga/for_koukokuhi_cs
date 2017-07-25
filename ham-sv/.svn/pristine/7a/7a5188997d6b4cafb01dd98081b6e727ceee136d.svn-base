@@ -1,6 +1,0 @@
-SystemXmlFile=@runtime.base.dir@/SystemParameter.xml
-DUMMYUSERMODE=FALSE
-JMS=FALSE
-EJB=FALSE
-SQLLOG=TRUE
-NJMODE=DEBUG
