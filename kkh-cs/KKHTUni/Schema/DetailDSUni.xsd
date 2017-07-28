@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DetailDSUni" targetNamespace="http://tempuri.org/DetailDSUni.xsd" xmlns:mstns="http://tempuri.org/DetailDSUni.xsd" xmlns="http://tempuri.org/DetailDSUni.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DetailDSUni" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DetailDSUni" msprop:Generator_DataSetName="DetailDSUni">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="KkhDetail" msprop:Generator_UserTableName="KkhDetail" msprop:Generator_RowDeletedName="KkhDetailRowDeleted" msprop:Generator_RowChangedName="KkhDetailRowChanged" msprop:Generator_RowClassName="KkhDetailRow" msprop:Generator_RowChangingName="KkhDetailRowChanging" msprop:Generator_RowEvArgName="KkhDetailRowChangeEvent" msprop:Generator_RowEvHandlerName="KkhDetailRowChangeEventHandler" msprop:Generator_TableClassName="KkhDetailDataTable" msprop:Generator_TableVarName="tableKkhDetail" msprop:Generator_RowDeletingName="KkhDetailRowDeleting" msprop:Generator_TablePropName="KkhDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="seikyuGenpyoBango" msprop:Generator_UserColumnName="seikyuGenpyoBango" msprop:Generator_ColumnVarNameInTable="columnseikyuGenpyoBango" msprop:Generator_ColumnPropNameInRow="seikyuGenpyoBango" msprop:Generator_ColumnPropNameInTable="seikyuGenpyoBangoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="shubetsu" msprop:Generator_UserColumnName="shubetsu" msprop:Generator_ColumnVarNameInTable="columnshubetsu" msprop:Generator_ColumnPropNameInRow="shubetsu" msprop:Generator_ColumnPropNameInTable="shubetsuColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="kenMei" msdata:Caption="Column1" msprop:Generator_UserColumnName="kenMei" msprop:Generator_ColumnVarNameInTable="columnkenMei" msprop:Generator_ColumnPropNameInRow="kenMei" msprop:Generator_ColumnPropNameInTable="kenMeiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="himokuMei" msdata:Caption="Column1" msprop:Generator_UserColumnName="himokuMei" msprop:Generator_ColumnVarNameInTable="columnhimokuMei" msprop:Generator_ColumnPropNameInRow="himokuMei" msprop:Generator_ColumnPropNameInTable="himokuMeiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="bangumiMei" msprop:Generator_UserColumnName="bangumiMei" msprop:Generator_ColumnPropNameInRow="bangumiMei" msprop:Generator_ColumnVarNameInTable="columnbangumiMei" msprop:Generator_ColumnPropNameInTable="bangumiMeiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="hosoTsuki" msdata:Caption="Column1" msprop:Generator_UserColumnName="hosoTsuki" msprop:Generator_ColumnPropNameInRow="hosoTsuki" msprop:Generator_ColumnVarNameInTable="columnhosoTsuki" msprop:Generator_ColumnPropNameInTable="hosoTsukiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="baitaiMei" msdata:Caption="Column1" msprop:Generator_UserColumnName="baitaiMei" msprop:Generator_ColumnPropNameInRow="baitaiMei" msprop:Generator_ColumnVarNameInTable="columnbaitaiMei" msprop:Generator_ColumnPropNameInTable="baitaiMeiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="seisakuNaiyo" msdata:Caption="Column1" msprop:Generator_UserColumnName="seisakuNaiyo" msprop:Generator_ColumnPropNameInRow="seisakuNaiyo" msprop:Generator_ColumnVarNameInTable="columnseisakuNaiyo" msprop:Generator_ColumnPropNameInTable="seisakuNaiyoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="keisaiBi" msdata:Caption="Column1" msprop:Generator_UserColumnName="keisaiBi" msprop:Generator_ColumnPropNameInRow="keisaiBi" msprop:Generator_ColumnVarNameInTable="columnkeisaiBi" msprop:Generator_ColumnPropNameInTable="keisaiBiColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="hosoKaisu" msdata:Caption="Column1" msprop:Generator_UserColumnName="hosoKaisu" msprop:Generator_ColumnPropNameInRow="hosoKaisu" msprop:Generator_ColumnVarNameInTable="columnhosoKaisu" msprop:Generator_ColumnPropNameInTable="hosoKaisuColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="tanka" msdata:Caption="Column1" msprop:Generator_UserColumnName="tanka" msprop:Generator_ColumnVarNameInTable="columntanka" msprop:Generator_ColumnPropNameInRow="tanka" msprop:Generator_ColumnPropNameInTable="tankaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="keisaiGo" msdata:Caption="Column1" msprop:Generator_UserColumnName="keisaiGo" msprop:Generator_ColumnVarNameInTable="columnkeisaiGo" msprop:Generator_ColumnPropNameInRow="keisaiGo" msprop:Generator_ColumnPropNameInTable="keisaiGoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="supesu" msdata:Caption="Column1" msprop:Generator_UserColumnName="supesu" msprop:Generator_ColumnVarNameInTable="columnsupesu" msprop:Generator_ColumnPropNameInRow="supesu" msprop:Generator_ColumnPropNameInTable="supesuColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="seikyuKinGaku" msdata:Caption="Column1" msprop:Generator_UserColumnName="seikyuKinGaku" msprop:Generator_ColumnVarNameInTable="columnseikyuKinGaku" msprop:Generator_ColumnPropNameInRow="seikyuKinGaku" msprop:Generator_ColumnPropNameInTable="seikyuKinGakuColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="shohizeiGaku" msdata:Caption="Column1" msprop:Generator_UserColumnName="shohizeiGaku" msprop:Generator_ColumnVarNameInTable="columnshohizeiGaku" msprop:Generator_ColumnPropNameInRow="shohizeiGaku" msprop:Generator_ColumnPropNameInTable="shohizeiGakuColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sotoBango" msdata:Caption="Column1" msprop:Generator_UserColumnName="sotoBango" msprop:Generator_ColumnVarNameInTable="columnsotoBango" msprop:Generator_ColumnPropNameInRow="sotoBango" msprop:Generator_ColumnPropNameInTable="sotoBangoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="busho" msprop:Generator_UserColumnName="busho" msprop:Generator_ColumnPropNameInRow="busho" msprop:Generator_ColumnVarNameInTable="columnbusho" msprop:Generator_ColumnPropNameInTable="bushoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

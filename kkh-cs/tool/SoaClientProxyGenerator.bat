@@ -1,0 +1,2 @@
+SoaClientProxyGenerator.exe SoaClientProxyGeneratorConfig.xml
+pause

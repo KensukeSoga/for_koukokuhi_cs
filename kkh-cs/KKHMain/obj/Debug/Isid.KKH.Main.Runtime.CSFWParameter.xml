@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Parameter SystemCode = "CSFW">
+  <!--
+  設定ファイルをアセンブリに埋め込むかどうかによって、以下の変更を行ってください
+  
+  埋め込まない場合：Runtime\log4net.xml
+  埋め込む場合　　：Isid.Rg.Main.Runtime.log4net.xml
+  -->
+  <Item Name="Log4netXMLPath"    Value="Isid.KKH.Main.Runtime.log4net.xml"/>
+  <Item Name="UploadBufferSize"  Value="1024"/>
+  <Item Name="SendParaEncoding"  Value="SHIFT-JIS"/>
+  <Item Name="ContentType"       Value="application/x-www-form-urlencoded;charset=ISO-8859-1" />
+</Parameter>

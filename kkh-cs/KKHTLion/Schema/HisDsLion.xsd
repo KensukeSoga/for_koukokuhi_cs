@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HisDsLion" targetNamespace="http://tempuri.org/HisDsLion.xsd" xmlns:mstns="http://tempuri.org/HisDsLion.xsd" xmlns="http://tempuri.org/HisDsLion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HisDsLion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="HisDsLion" msprop:Generator_DataSetName="HisDsLion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="jyutyuDownLoad" msprop:Generator_UserTableName="jyutyuDownLoad" msprop:Generator_RowDeletedName="jyutyuDownLoadRowDeleted" msprop:Generator_RowChangedName="jyutyuDownLoadRowChanged" msprop:Generator_RowClassName="jyutyuDownLoadRow" msprop:Generator_RowChangingName="jyutyuDownLoadRowChanging" msprop:Generator_RowEvArgName="jyutyuDownLoadRowChangeEvent" msprop:Generator_RowEvHandlerName="jyutyuDownLoadRowChangeEventHandler" msprop:Generator_TableClassName="jyutyuDownLoadDataTable" msprop:Generator_TableVarName="tablejyutyuDownLoad" msprop:Generator_RowDeletingName="jyutyuDownLoadRowDeleting" msprop:Generator_TablePropName="jyutyuDownLoad">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GpsyuTimStmp" msprop:Generator_UserColumnName="GpsyuTimStmp" msprop:Generator_ColumnVarNameInTable="columnGpsyuTimStmp" msprop:Generator_ColumnPropNameInRow="GpsyuTimStmp" msprop:Generator_ColumnPropNameInTable="GpsyuTimStmpColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SyuKbn" msprop:Generator_UserColumnName="SyuKbn" msprop:Generator_ColumnVarNameInTable="columnSyuKbn" msprop:Generator_ColumnPropNameInRow="SyuKbn" msprop:Generator_ColumnPropNameInTable="SyuKbnColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Yymm" msprop:Generator_UserColumnName="Yymm" msprop:Generator_ColumnVarNameInTable="columnYymm" msprop:Generator_ColumnPropNameInRow="Yymm" msprop:Generator_ColumnPropNameInTable="YymmColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GyomKbn" msprop:Generator_UserColumnName="GyomKbn" msprop:Generator_ColumnVarNameInTable="columnGyomKbn" msprop:Generator_ColumnPropNameInRow="GyomKbn" msprop:Generator_ColumnPropNameInTable="GyomKbnColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TntCd" msprop:Generator_UserColumnName="TntCd" msprop:Generator_ColumnVarNameInTable="columnTntCd" msprop:Generator_ColumnPropNameInRow="TntCd" msprop:Generator_ColumnPropNameInTable="TntCdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TntNm" msprop:Generator_UserColumnName="TntNm" msprop:Generator_ColumnVarNameInTable="columnTntNm" msprop:Generator_ColumnPropNameInRow="TntNm" msprop:Generator_ColumnPropNameInTable="TntNmColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

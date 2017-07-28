@@ -1,0 +1,226 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{45C2F31C-59AB-49FE-8850-50FE0CD38D08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Isid.KKH.Main</RootNamespace>
+    <AssemblyName>KKHMain</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\KKHMain.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.CalcEngine, Version=3.0.2018.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Excel, Version=3.0.2018.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread.DesignJ, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.SpreadJ, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="NJFrameWork, Version=2.0.2.3, Culture=neutral, PublicKeyToken=d18c0f98bf7ae934, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NJFrameWork.dll</HintPath>
+    </Reference>
+    <Reference Include="NJSecurity, Version=1.0.0.6, Culture=neutral, PublicKeyToken=b7efe27cc890b4ba, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NJSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="SoaClientFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=40b295f37f145266, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\SoaClientFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApliConfigureFileInfo.cs" />
+    <Compile Include="ProcessController\Login\LoginServiceResult.cs" />
+    <Compile Include="ProcessController\Login\LoginProcessController.cs" />
+    <Compile Include="ProcessController\Login\Parser\LoginParseResult.cs" />
+    <Compile Include="ProcessController\Login\Parser\LoginParser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\LoginCustomerSelect.resx">
+      <DependentUpon>LoginCustomerSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\Login.xsc">
+      <DependentUpon>Login.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\Login.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Login.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\Login.xss">
+      <DependentUpon>Login.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="KKHMainEntry.cs" />
+    <Compile Include="Schema\Login.cs">
+      <DependentUpon>Login.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schema\Login.Designer.cs">
+      <DependentUpon>Login.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Utility\KkhConstMain.cs" />
+    <Compile Include="View\Login\LoginNaviParameter.cs" />
+    <Compile Include="View\Login\LoginCustomerSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\LoginCustomerSelect.Designer.cs">
+      <DependentUpon>LoginCustomerSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Runtime\CSFWMessage.xml" />
+    <EmbeddedResource Include="Runtime\CSFWParameter.xml" />
+    <EmbeddedResource Include="Runtime\DummySecurity.xml" />
+    <EmbeddedResource Include="Runtime\KKHMacInputDataDefi.xml" />
+    <EmbeddedResource Include="Runtime\log4net.xml" />
+    <EmbeddedResource Include="Runtime\SoaClientParameter.xml" />
+    <EmbeddedResource Include="Runtime\KKHActionMapping.xml" />
+    <EmbeddedResource Include="Runtime\SystemParameter.xml" />
+    <EmbeddedResource Include="Runtime\KKHMessage.xml" />
+    <EmbeddedResource Include="Runtime\KKHParameter.xml" />
+    <EmbeddedResource Include="Runtime\KKHApplicationId.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KKHCommon\KKHCommon.csproj">
+      <Project>{EEF94B1D-4F1C-46D9-B6A2-527C54B92B59}</Project>
+      <Name>KKHCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHTAcom\KKHTAcom.csproj">
+      <Project>{0139904A-C48A-4D01-A2A4-BB83E5D833C6}</Project>
+      <Name>KKHTAcom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHTAsh\KKHTAsh.csproj">
+      <Project>{DFE98F5C-37D9-41D3-8291-ABB6B563D880}</Project>
+      <Name>KKHTAsh</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHTEpson\KKHTEpson.csproj">
+      <Project>{2F24F84B-9985-4925-AE78-0267DECF36EE}</Project>
+      <Name>KKHTEpson</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHTKmn\KKHTKmn.csproj">
+      <Project>{F1BD6932-3844-405E-BCFD-AAE8AC05687E}</Project>
+      <Name>KKHTKmn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHTLion\KKHTLion.csproj">
+      <Project>{A3C4CAD5-89C2-4986-BF9D-3BA3B85D21D4}</Project>
+      <Name>KKHTLion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHTMac\KKHTMac.csproj">
+      <Project>{FD7A18A0-3C46-4822-9C8C-4D9305210434}</Project>
+      <Name>KKHTMac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHTSkyp\KKHTSkyp.csproj">
+      <Project>{E65EAEAE-3DE8-4CD0-9629-01FE48BB6EF6}</Project>
+      <Name>KKHTSkyp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHTTkd\KKHTTkd.csproj">
+      <Project>{AD13B513-C325-4C70-BB83-E9D2ABF30521}</Project>
+      <Name>KKHTTkd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHTToh\KKHTToh.csproj">
+      <Project>{D8DCB067-DC70-4BAC-AB6B-23FCE3B35A27}</Project>
+      <Name>KKHTToh</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHTUni\KKHTUni.csproj">
+      <Project>{92DE62FE-EA52-4B5B-BFA8-3FAC744CCCBC}</Project>
+      <Name>KKHTUni</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

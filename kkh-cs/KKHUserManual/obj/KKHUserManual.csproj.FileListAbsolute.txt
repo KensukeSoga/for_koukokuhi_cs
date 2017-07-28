@@ -1,0 +1,14 @@
+D:\workspace\kkh-cs\cs\KKHUserManual\bin\Debug\KKHUserManual.dll
+D:\workspace\kkh-cs\cs\KKHUserManual\bin\Debug\KKHUserManual.pdb
+D:\workspace\kkh-cs\cs\KKHUserManual\bin\Debug\Castle.DynamicProxy.dll
+D:\workspace\kkh-cs\cs\KKHUserManual\bin\Debug\log4net.dll
+D:\workspace\kkh-cs\cs\KKHUserManual\bin\Debug\Microsoft.Web.Services3.dll
+D:\workspace\kkh-cs\cs\KKHUserManual\bin\Debug\NJFrameWork.dll
+D:\workspace\kkh-cs\cs\KKHUserManual\bin\Debug\NJRemotingObject.dll
+D:\workspace\kkh-cs\cs\KKHUserManual\bin\Debug\NJSecurity.dll
+D:\workspace\kkh-cs\cs\KKHUserManual\bin\Debug\SoaClientFramework.dll
+D:\workspace\kkh-cs\cs\KKHUserManual\obj\Debug\ResolveAssemblyReference.cache
+D:\workspace\kkh-cs\cs\KKHUserManual\obj\Debug\Isid.KKH.UserManual.Properties.Resources.resources
+D:\workspace\kkh-cs\cs\KKHUserManual\obj\Debug\KKHUserManual.csproj.GenerateResource.Cache
+D:\workspace\kkh-cs\cs\KKHUserManual\obj\Debug\KKHUserManual.dll
+D:\workspace\kkh-cs\cs\KKHUserManual\obj\Debug\KKHUserManual.pdb

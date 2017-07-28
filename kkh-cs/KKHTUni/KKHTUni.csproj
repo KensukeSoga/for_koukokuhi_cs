@@ -1,0 +1,215 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{92DE62FE-EA52-4B5B-BFA8-3FAC744CCCBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Isid.KKH.Uni</RootNamespace>
+    <AssemblyName>KKHTUni</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Excel, Version=3.0.2018.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.SpreadJ, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="NJFrameWork, Version=2.0.2.4, Culture=neutral, PublicKeyToken=d18c0f98bf7ae934, processorArchitecture=MSIL" />
+    <Reference Include="NJSecurity, Version=1.0.2.1, Culture=neutral, PublicKeyToken=37e67a8623a4ceb5, processorArchitecture=MSIL" />
+    <Reference Include="SoaClientFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1c57d1a137716eb0, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProcessController\Report\FindReportUniByCondServiceResult.cs" />
+    <Compile Include="ProcessController\Report\Parser\FindReportUniByCondParseResult.cs" />
+    <Compile Include="ProcessController\Report\Parser\ReportParser.cs" />
+    <Compile Include="ProcessController\Report\ReportUniProcessController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailHosoBiUni.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailHosoBiUni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailInputUni.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailInputUni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailUni.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailUni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\JyutyuRegisterUni.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>JyutyuRegisterUni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Mast\frmMastUni.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMastUni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\ReportUni.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportUni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Top\frmTopMenuUni.resx">
+      <DependentUpon>frmTopMenuUni.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Uni_Mcr.xlsm" />
+    <None Include="Resources\Uni_Template.xlsm" />
+    <None Include="Resources\Uni_Template.xlsx" />
+    <None Include="Schema\DetailDSUni.xsc">
+      <DependentUpon>DetailDSUni.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\DetailDSUni.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DetailDSUni.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\DetailDSUni.xss">
+      <DependentUpon>DetailDSUni.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\RepDsUni.xsc">
+      <DependentUpon>RepDsUni.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\RepDsUni.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepDsUni.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\RepDsUni.xss">
+      <DependentUpon>RepDsUni.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Schema\DetailDSUni.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DetailDSUni.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\RepDsUni.cs">
+      <DependentUpon>RepDsUni.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schema\RepDsUni.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepDsUni.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\KkhConstUni.cs" />
+    <Compile Include="Utility\KKHLogUtilityUni.cs" />
+    <Compile Include="Utility\KkhUniStrConv.cs" />
+    <Compile Include="View\Detail\DetailHosoBiUni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailHosoBiUni.Designer.cs">
+      <DependentUpon>DetailHosoBiUni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailHosoBiUniNaviParameter.cs" />
+    <Compile Include="View\Detail\DetailInputUni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailInputUni.Designer.cs">
+      <DependentUpon>DetailInputUni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailInputUniNaviParameter.cs" />
+    <Compile Include="View\Detail\DetailUni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailUni.Designer.cs">
+      <DependentUpon>DetailUni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailUniNaviParameter.cs" />
+    <Compile Include="View\Detail\JyutyuRegisterUni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\JyutyuRegisterUni.Designer.cs">
+      <DependentUpon>JyutyuRegisterUni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mast\frmMastUni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Mast\frmMastUni.Designer.cs">
+      <DependentUpon>frmMastUni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\ReportUni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\ReportUni.Designer.cs">
+      <DependentUpon>ReportUni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Top\frmTopMenuUni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Top\frmTopMenuUni.Designer.cs">
+      <DependentUpon>frmTopMenuUni.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KKHCommon\KKHCommon.csproj">
+      <Project>{EEF94B1D-4F1C-46D9-B6A2-527C54B92B59}</Project>
+      <Name>KKHCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHUserManual\KKHUserManual.csproj">
+      <Project>{C3D66AA1-596E-43E2-BC2C-489E2CAC16F2}</Project>
+      <Name>KKHUserManual</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

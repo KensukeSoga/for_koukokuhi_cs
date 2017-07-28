@@ -1,0 +1,299 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFE98F5C-37D9-41D3-8291-ABB6B563D880}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Isid.KKH.Ash</RootNamespace>
+    <AssemblyName>KKHTAsh</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\KKHTAsh.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.CalcEngine, Version=3.0.2018.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Excel, Version=3.0.2018.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.Spread.DesignJ, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.SpreadJ, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="NJFrameWork, Version=2.0.2.4, Culture=neutral, PublicKeyToken=d18c0f98bf7ae934, processorArchitecture=MSIL" />
+    <Reference Include="NJSecurity, Version=1.0.2.1, Culture=neutral, PublicKeyToken=37e67a8623a4ceb5, processorArchitecture=MSIL" />
+    <Reference Include="SoaClientFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1c57d1a137716eb0, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProcessController\Detail\DetailAshProcessController.cs" />
+    <Compile Include="ProcessController\Detail\FindDetailDataAshByCondServiceResult.cs" />
+    <Compile Include="ProcessController\Detail\FindKeyKyokuBangumiCdServiceResult.cs" />
+    <Compile Include="ProcessController\Detail\MergeDataServiceResult.cs" />
+    <Compile Include="ProcessController\Detail\Parser\DetailAshParser.cs" />
+    <Compile Include="ProcessController\Detail\Parser\FindDetailDataAshByCondParseResult.cs" />
+    <Compile Include="ProcessController\Detail\Parser\FindKeyKyokuBangumiCdParseResult.cs" />
+    <Compile Include="ProcessController\Report\FindReportAshMediaByCondServiceResult.cs" />
+    <Compile Include="ProcessController\Report\Parser\ReportAshParser.cs" />
+    <Compile Include="ProcessController\Report\Parser\ReportAshParseResult.cs" />
+    <Compile Include="ProcessController\Report\ReportAshProcessController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailAsh.resx">
+      <DependentUpon>DetailAsh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailInputAsh.resx">
+      <DependentUpon>DetailInputAsh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailSetTimeAsh.resx">
+      <DependentUpon>DetailSetTimeAsh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailSetNpMzAsh.resx">
+      <DependentUpon>DetailSetNpMzAsh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailSetOthersAsh.resx">
+      <DependentUpon>DetailSetOthersAsh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\RatioInputAsh.resx">
+      <DependentUpon>RatioInputAsh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\StationSelectAsh.resx">
+      <DependentUpon>StationSelectAsh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Mast\frmMastAsh.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMastAsh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\FDAsh.resx">
+      <DependentUpon>FDAsh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\ReportAshByMedium.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportAshByMedium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\ReportAshByMediumChklst.resx">
+      <DependentUpon>ReportAshByMediumChklst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\ReportAshKoukokuHi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportAshKoukokuHi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Top\frmTopMenuAsh.resx">
+      <DependentUpon>frmTopMenuAsh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\AshBeer_Medium.xlsm" />
+    <None Include="Resources\AshBeer_Medium_Template.xlsx" />
+    <None Include="Resources\Ash_Fd.xlsm" />
+    <None Include="Resources\Ash_Fd_Template.xls" />
+    <None Include="Resources\Ash_KoukokuHi.xlsm" />
+    <None Include="Resources\Ash_KoukokuHi_Template.xlsx" />
+    <None Include="Resources\Ash_Medium.xlsm" />
+    <None Include="Resources\Ash_MediumChklst.xlsm" />
+    <None Include="Resources\Ash_MediumChklst_Template.xls" />
+    <None Include="Resources\Ash_MediumChklst_Template.xlsm" />
+    <None Include="Resources\Ash_Medium_Template.xlsx" />
+    <None Include="Schema\DetailDSAsh.xsc">
+      <DependentUpon>DetailDSAsh.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\DetailDSAsh.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DetailDSAsh.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\DetailDSAsh.xss">
+      <DependentUpon>DetailDSAsh.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\RepDsAsh.xsc">
+      <DependentUpon>RepDsAsh.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\RepDsAsh.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepDsAsh.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\RepDsAsh.xss">
+      <DependentUpon>RepDsAsh.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Schema\DetailDSAsh.cs">
+      <DependentUpon>DetailDSAsh.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schema\DetailDSAsh.Designer.cs">
+      <DependentUpon>DetailDSAsh.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Schema\RepDsAsh.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RepDsAsh.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\AshBaitaiUtility.cs" />
+    <Compile Include="Utility\AshComboBoxItem.cs" />
+    <Compile Include="Utility\KkhConstAsh.cs" />
+    <Compile Include="Utility\KKHHelpAsh.cs" />
+    <Compile Include="Utility\KKHLogUtilityAsh.cs" />
+    <Compile Include="View\Detail\DetailAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailAsh.Designer.cs">
+      <DependentUpon>DetailAsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailInputAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailInputAsh.Designer.cs">
+      <DependentUpon>DetailInputAsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\JyutyuRegisterAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\JyutyuRegisterAsh.Designer.cs">
+      <DependentUpon>JyutyuRegisterAsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailSetTimeAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailSetTimeAsh.Designer.cs">
+      <DependentUpon>DetailSetTimeAsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailSetNpMzAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailSetNpMzAsh.Designer.cs">
+      <DependentUpon>DetailSetNpMzAsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailSetOthersAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailSetOthersAsh.Designer.cs">
+      <DependentUpon>DetailSetOthersAsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\RatioInputAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\RatioInputAsh.Designer.cs">
+      <DependentUpon>RatioInputAsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\StationSelectAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\StationSelectAsh.Designer.cs">
+      <DependentUpon>StationSelectAsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mast\frmMastAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Mast\frmMastAsh.Designer.cs">
+      <DependentUpon>frmMastAsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\FDAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\FDAsh.Designer.cs">
+      <DependentUpon>FDAsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\ReportAshByMedium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\ReportAshByMedium.Designer.cs">
+      <DependentUpon>ReportAshByMedium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\ReportAshByMediumChklst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\ReportAshByMediumChklst.Designer.cs">
+      <DependentUpon>ReportAshByMediumChklst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\ReportAshKoukokuHi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\ReportAshKoukokuHi.Designer.cs">
+      <DependentUpon>ReportAshKoukokuHi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Top\frmTopMenuAsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Top\frmTopMenuAsh.Designer.cs">
+      <DependentUpon>frmTopMenuAsh.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KKHCommon\KKHCommon.csproj">
+      <Project>{EEF94B1D-4F1C-46D9-B6A2-527C54B92B59}</Project>
+      <Name>KKHCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHUserManual\KKHUserManual.csproj">
+      <Project>{C3D66AA1-596E-43E2-BC2C-489E2CAC16F2}</Project>
+      <Name>KKHUserManual</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

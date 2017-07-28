@@ -1,0 +1,497 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3C4CAD5-89C2-4986-BF9D-3BA3B85D21D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Isid.KKH.Lion</RootNamespace>
+    <AssemblyName>KKHTLion</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.Excel, Version=3.0.2018.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.SpreadJ, Version=3.0.2009.2005, Culture=neutral, PublicKeyToken=a5fa960294d899e7, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="NJFrameWork, Version=2.0.2.4, Culture=neutral, PublicKeyToken=d18c0f98bf7ae934, processorArchitecture=MSIL" />
+    <Reference Include="NJSecurity, Version=1.0.2.1, Culture=neutral, PublicKeyToken=37e67a8623a4ceb5, processorArchitecture=MSIL" />
+    <Reference Include="SoaClientFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1c57d1a137716eb0, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProcessController\Detail\DetailLionProcessController.cs" />
+    <Compile Include="ProcessController\Detail\FindLionByCondServiceResult.cs" />
+    <Compile Include="ProcessController\Detail\FindLionCardNoItrServiceResult.cs" />
+    <Compile Include="ProcessController\Detail\FindLionCodeItrServiceResult.cs" />
+    <Compile Include="ProcessController\Detail\FindLionTVSpotServiceResult.cs" />
+    <Compile Include="ProcessController\Detail\Parser\FindLionCardNoGetParser.cs" />
+    <Compile Include="ProcessController\Detail\Parser\DetailParser.cs" />
+    <Compile Include="ProcessController\Detail\Parser\FindDetailDataLionByCondParseResult.cs" />
+    <Compile Include="ProcessController\Detail\Parser\FindDetailLionParser.cs" />
+    <Compile Include="ProcessController\Detail\Parser\FindLionCardNoItrParser.cs" />
+    <Compile Include="ProcessController\Detail\Parser\FindLionCodeItrParser.cs" />
+    <Compile Include="ProcessController\Detail\Parser\FindLionTVSpotParser.cs" />
+    <Compile Include="ProcessController\Detail\UpdateSubjectDataServiceResult.cs" />
+    <Compile Include="ProcessController\Report\FindAddChangeReportByCondServiceResult.cs" />
+    <Compile Include="ProcessController\Report\Parser\FindAddChangeReportByCondParserResult.cs" />
+    <Compile Include="ProcessController\Report\Parser\AddChangeReportParser.cs" />
+    <Compile Include="ProcessController\Report\Parser\FindInvoicePlanByCondParserResult.cs" />
+    <Compile Include="ProcessController\Report\Parser\InvoicePlanParser.cs" />
+    <Compile Include="ProcessController\Report\Parser\OrderDiffListParser.cs" />
+    <Compile Include="ProcessController\Report\Parser\FindOrderDiffListByCondParserResult.cs" />
+    <Compile Include="ProcessController\Report\RegisterLionOrderHistoryServiceResult.cs" />
+    <Compile Include="ProcessController\Report\FindDetailListLionByCondServiceResult.cs" />
+    <Compile Include="ProcessController\Report\FindFDLionByCondServiceResult.cs" />
+    <Compile Include="ProcessController\Report\Parser\DetailListLionParser.cs" />
+    <Compile Include="ProcessController\Report\Parser\FDLionParser.cs" />
+    <Compile Include="ProcessController\Report\Parser\FindDetailListLionByCondParseResult.cs" />
+    <Compile Include="ProcessController\Report\Parser\FindFDLionByCondParseResult.cs" />
+    <Compile Include="ProcessController\MastGet\Converter\MasterDataSetConverter.cs" />
+    <Compile Include="ProcessController\MastGet\FindLionMastByCondServiceResult.cs" />
+    <Compile Include="ProcessController\MastGet\MasterMaintenanceProcessController.cs" />
+    <Compile Include="ProcessController\MastGet\MastLionZashiRyoSpcServiceResult.cs" />
+    <Compile Include="ProcessController\MastGet\Parser\FindLionMastParseResult.cs" />
+    <Compile Include="ProcessController\MastGet\Parser\MasterMaintenanceParser.cs" />
+    <Compile Include="ProcessController\MastGet\Parser\FindLionMastParser.cs" />
+    <Compile Include="ProcessController\MastGet\Parser\MastLionZashiRyoSpcParser.cs" />
+    <Compile Include="ProcessController\MastGet\RegisterMasterServiceResult.cs" />
+    <Compile Include="ProcessController\MastGet\UpdateTimeStampDataServiceResult.cs" />
+    <Compile Include="ProcessController\Report\FindReportLionByCondServiceResult.cs" />
+    <Compile Include="ProcessController\Report\Parser\FindReportLionByCondParseResult.cs" />
+    <Compile Include="ProcessController\Report\Parser\ReportLionParser.cs" />
+    <Compile Include="ProcessController\Report\ReportLionProcessController.cs" />
+    <Compile Include="ProcessController\Report\FindInvoicePlanByCondServiceResult.cs" />
+    <Compile Include="ProcessController\Report\UpdateLionRrkAD1FlgServiceResult.cs" />
+    <Compile Include="ProcessController\Report\FindOrderDiffListByCondServiceResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailInputLion.resx">
+      <DependentUpon>DetailInputLion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailLion.resx">
+      <DependentUpon>DetailLion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailLionBulkRegister.resx">
+      <DependentUpon>DetailLionBulkRegister.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailLionJyutyuRegister.resx">
+      <DependentUpon>DetailLionJyutyuRegister.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\DetailUpdateSubject.resx">
+      <DependentUpon>DetailUpdateSubject.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\FindLionCardNoItr.resx">
+      <DependentUpon>FindLionCardNoItr.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\FindLionCodeItr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FindLionCodeItr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\FindLionTVSpot.resx">
+      <DependentUpon>FindLionTVSpot.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Detail\JyutyuRegisterLion.resx">
+      <DependentUpon>JyutyuRegisterLion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\ReportOrderDiffLion.resx">
+      <DependentUpon>ReportOrderDiffLion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\DetailListLion.resx">
+      <DependentUpon>DetailListLion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\FDLion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FDLion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Mast\frmMastLion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMastLion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Mast\frmMastLionZashiRyoSpc.resx">
+      <DependentUpon>frmMastLionZashiRyoSpc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\NewReportLion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewReportLion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\ReportProofLion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportProofLion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\ReportAddChangeLion.resx">
+      <DependentUpon>ReportAddChangeLion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\ReportInvoicePlanLion.resx">
+      <DependentUpon>ReportInvoicePlanLion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Top\frmTopMenuLion.resx">
+      <DependentUpon>frmTopMenuLion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\LionNewReport.xlsm" />
+    <None Include="Resources\Lion_Baitai_Mcr.xlsm" />
+    <None Include="Resources\Lion_Baitai_Template.xlsx" />
+    <None Include="Resources\Lion_Baitai_Template2.xlsx" />
+    <None Include="Resources\Lion_Mcr.xlsm" />
+    <None Include="Resources\Lion_NewReport_Template.xlsx" />
+    <None Include="Resources\Lion_OrderDiff_Mcr.xlsm" />
+    <None Include="Resources\Lion_OrderDiff_Template.xlsx" />
+    <None Include="Resources\Lion_Seisaku_Mcr.xlsm" />
+    <None Include="Resources\Lion_Seisaku_Template.xlsx" />
+    <None Include="Resources\Lion_Template.xlsx" />
+    <None Include="Schema\AddChgDsLion.xsc">
+      <DependentUpon>AddChgDsLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\AddChgDsLion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AddChgDsLion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\AddChgDsLion.xss">
+      <DependentUpon>AddChgDsLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\DetailDSLion.xsc">
+      <DependentUpon>DetailDSLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\DetailDSLion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DetailDSLion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\DetailDSLion.xss">
+      <DependentUpon>DetailDSLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\FDDSLion.xsc">
+      <DependentUpon>FDDSLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\FDDSLion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FDDSLion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\FDDSLion.xss">
+      <DependentUpon>FDDSLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\InvoicePlanLion.xsc">
+      <DependentUpon>InvoicePlanLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\InvoicePlanLion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoicePlanLion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\InvoicePlanLion.xss">
+      <DependentUpon>InvoicePlanLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\MastLion.xsc">
+      <DependentUpon>MastLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\MastLion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MastLion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\MastLion.xss">
+      <DependentUpon>MastLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\OrderDiffDsLion.xsc">
+      <DependentUpon>OrderDiffDsLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\OrderDiffDsLion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderDiffDsLion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\OrderDiffDsLion.xss">
+      <DependentUpon>OrderDiffDsLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\RepDsLion.xsc">
+      <DependentUpon>RepDsLion.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\RepDsLion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepDsLion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\RepDsLion.xss">
+      <DependentUpon>RepDsLion.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Schema\AddChgDsLion.cs">
+      <DependentUpon>AddChgDsLion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schema\AddChgDsLion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddChgDsLion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\DetailDSLion.cs">
+      <DependentUpon>DetailDSLion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schema\DetailDSLion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DetailDSLion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\FDDSLion.cs">
+      <DependentUpon>FDDSLion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schema\FDDSLion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FDDSLion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\InvoicePlanLion.cs">
+      <DependentUpon>InvoicePlanLion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schema\InvoicePlanLion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoicePlanLion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\MastLion.cs">
+      <DependentUpon>MastLion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schema\MastLion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MastLion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\OrderDiffDsLion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderDiffDsLion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\RepDsLion.cs">
+      <DependentUpon>RepDsLion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schema\RepDsLion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepDsLion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\KKHLionCMDateCheck.cs" />
+    <Compile Include="Utility\KKHHelpLion.cs" />
+    <Compile Include="Utility\KKHLionReadMastDB.cs" />
+    <Compile Include="Utility\KKHLogUtilityLion.cs" />
+    <Compile Include="Utility\LionComboBoxItem.cs" />
+    <Compile Include="Utility\KKHLionConst.cs" />
+    <Compile Include="Utility\KKHLionDetailCreate.cs" />
+    <Compile Include="Utility\KKHLionTimeStamp.cs" />
+    <Compile Include="Utility\KKHLionReadMastFile.cs" />
+    <Compile Include="View\Detail\DetailInputLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailInputLion.Designer.cs">
+      <DependentUpon>DetailInputLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailInputLionNaviParameter.cs" />
+    <Compile Include="View\Detail\DetailLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailLion.Designer.cs">
+      <DependentUpon>DetailLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailLionBulkRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailLionBulkRegister.Designer.cs">
+      <DependentUpon>DetailLionBulkRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailLionBulkRegisterNaviParameter.cs" />
+    <Compile Include="View\Detail\DetailLionJyutyuRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailLionJyutyuRegister.Designer.cs">
+      <DependentUpon>DetailLionJyutyuRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailUpdateSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\DetailUpdateSubject.Designer.cs">
+      <DependentUpon>DetailUpdateSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\DetailUpdateSubjectNaviParameter.cs" />
+    <Compile Include="View\Detail\FindLionCardNoItr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\FindLionCardNoItr.designer.cs">
+      <DependentUpon>FindLionCardNoItr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\FindLionCardNoItrNaviParameter.cs" />
+    <Compile Include="View\Detail\FindLionCodeItr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\FindLionCodeItr.Designer.cs">
+      <DependentUpon>FindLionCodeItr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\FindLionCodeItrNaviParameter.cs" />
+    <Compile Include="View\Detail\FindLionCodeItrNaviParameter2.cs" />
+    <Compile Include="View\Detail\FindLionTVSpot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\FindLionTVSpot.Designer.cs">
+      <DependentUpon>FindLionTVSpot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Detail\FindLionTVSpotNaviParameter.cs" />
+    <Compile Include="View\Detail\JyutyuRegisterLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Detail\JyutyuRegisterLion.Designer.cs">
+      <DependentUpon>JyutyuRegisterLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\ReportOrderDiffLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\ReportOrderDiffLion.Designer.cs">
+      <DependentUpon>ReportOrderDiffLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\DetailListLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\DetailListLion.Designer.cs">
+      <DependentUpon>DetailListLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\FDLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\FDLion.Designer.cs">
+      <DependentUpon>FDLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mast\frmMastLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Mast\frmMastLion.Designer.cs">
+      <DependentUpon>frmMastLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mast\frmMastLionNaviParameter.cs" />
+    <Compile Include="View\Mast\frmMastLionZashiRyoSpc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Mast\frmMastLionZashiRyoSpc.Designer.cs">
+      <DependentUpon>frmMastLionZashiRyoSpc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\NewReportLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\NewReportLion.Designer.cs">
+      <DependentUpon>NewReportLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\ReportProofLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\ReportProofLion.Designer.cs">
+      <DependentUpon>ReportProofLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\ReportAddChangeLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\ReportAddChangeLion.Designer.cs">
+      <DependentUpon>ReportAddChangeLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\ReportInvoicePlanLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\ReportInvoicePlanLion.Designer.cs">
+      <DependentUpon>ReportInvoicePlanLion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Top\frmTopMenuLion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Top\frmTopMenuLion.Designer.cs">
+      <DependentUpon>frmTopMenuLion.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KKHCommon\KKHCommon.csproj">
+      <Project>{EEF94B1D-4F1C-46D9-B6A2-527C54B92B59}</Project>
+      <Name>KKHCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KKHUserManual\KKHUserManual.csproj">
+      <Project>{C3D66AA1-596E-43E2-BC2C-489E2CAC16F2}</Project>
+      <Name>KKHUserManual</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

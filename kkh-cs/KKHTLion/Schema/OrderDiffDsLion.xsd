@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrderDiffLion" targetNamespace="http://tempuri.org/OrderDiffLion.xsd" xmlns:mstns="http://tempuri.org/OrderDiffLion.xsd" xmlns="http://tempuri.org/OrderDiffLion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderDiffLion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="OrderDiffLion" msprop:Generator_DataSetName="OrderDiffLion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrderDiffList" msprop:Generator_UserTableName="OrderDiffList" msprop:Generator_RowDeletedName="OrderDiffListRowDeleted" msprop:Generator_RowChangedName="OrderDiffListRowChanged" msprop:Generator_RowClassName="OrderDiffListRow" msprop:Generator_RowChangingName="OrderDiffListRowChanging" msprop:Generator_RowEvArgName="OrderDiffListRowChangeEvent" msprop:Generator_RowEvHandlerName="OrderDiffListRowChangeEventHandler" msprop:Generator_TableClassName="OrderDiffListDataTable" msprop:Generator_TableVarName="tableOrderDiffList" msprop:Generator_RowDeletingName="OrderDiffListRowDeleting" msprop:Generator_TablePropName="OrderDiffList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JYUTNO" msprop:Generator_UserColumnName="JYUTNO" msprop:Generator_ColumnVarNameInTable="columnJYUTNO" msprop:Generator_ColumnPropNameInRow="JYUTNO" msprop:Generator_ColumnPropNameInTable="JYUTNOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="JYMEINO" msprop:Generator_UserColumnName="JYMEINO" msprop:Generator_ColumnVarNameInTable="columnJYMEINO" msprop:Generator_ColumnPropNameInRow="JYMEINO" msprop:Generator_ColumnPropNameInTable="JYMEINOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="URMEINO" msprop:Generator_UserColumnName="URMEINO" msprop:Generator_ColumnVarNameInTable="columnURMEINO" msprop:Generator_ColumnPropNameInRow="URMEINO" msprop:Generator_ColumnPropNameInTable="URMEINOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KKNAMEKJ" msprop:Generator_UserColumnName="KKNAMEKJ" msprop:Generator_ColumnVarNameInTable="columnKKNAMEKJ" msprop:Generator_ColumnPropNameInRow="KKNAMEKJ" msprop:Generator_ColumnPropNameInTable="KKNAMEKJColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GYOMKBN" msprop:Generator_UserColumnName="GYOMKBN" msprop:Generator_ColumnVarNameInTable="columnGYOMKBN" msprop:Generator_ColumnPropNameInRow="GYOMKBN" msprop:Generator_ColumnPropNameInTable="GYOMKBNColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GYOMKBNKJ" msprop:Generator_UserColumnName="GYOMKBNKJ" msprop:Generator_ColumnVarNameInTable="columnGYOMKBNKJ" msprop:Generator_ColumnPropNameInRow="GYOMKBNKJ" msprop:Generator_ColumnPropNameInTable="GYOMKBNKJColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HIMKCD" msprop:Generator_UserColumnName="HIMKCD" msprop:Generator_ColumnVarNameInTable="columnHIMKCD" msprop:Generator_ColumnPropNameInRow="HIMKCD" msprop:Generator_ColumnPropNameInTable="HIMKCDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HIMKNMKJ" msprop:Generator_UserColumnName="HIMKNMKJ" msprop:Generator_ColumnVarNameInTable="columnHIMKNMKJ" msprop:Generator_ColumnPropNameInRow="HIMKNMKJ" msprop:Generator_ColumnPropNameInTable="HIMKNMKJColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SEIGAK" msprop:Generator_UserColumnName="SEIGAK" msprop:Generator_ColumnVarNameInTable="columnSEIGAK" msprop:Generator_ColumnPropNameInRow="SEIGAK" msprop:Generator_ColumnPropNameInTable="SEIGAKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TORIGAK" msprop:Generator_UserColumnName="TORIGAK" msprop:Generator_ColumnVarNameInTable="columnTORIGAK" msprop:Generator_ColumnPropNameInRow="TORIGAK" msprop:Generator_ColumnPropNameInTable="TORIGAKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SZEIGAK" msprop:Generator_UserColumnName="SZEIGAK" msprop:Generator_ColumnVarNameInTable="columnSZEIGAK" msprop:Generator_ColumnPropNameInRow="SZEIGAK" msprop:Generator_ColumnPropNameInTable="SZEIGAKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SEQ" msprop:Generator_UserColumnName="SEQ" msprop:Generator_ColumnVarNameInTable="columnSEQ" msprop:Generator_ColumnPropNameInRow="SEQ" msprop:Generator_ColumnPropNameInTable="SEQColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NEBIGAK" msprop:Generator_UserColumnName="NEBIGAK" msprop:Generator_ColumnPropNameInRow="NEBIGAK" msprop:Generator_ColumnVarNameInTable="columnNEBIGAK" msprop:Generator_ColumnPropNameInTable="NEBIGAKColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderNewList" msprop:Generator_UserTableName="OrderNewList" msprop:Generator_RowDeletedName="OrderNewListRowDeleted" msprop:Generator_RowChangedName="OrderNewListRowChanged" msprop:Generator_RowClassName="OrderNewListRow" msprop:Generator_RowChangingName="OrderNewListRowChanging" msprop:Generator_RowEvArgName="OrderNewListRowChangeEvent" msprop:Generator_RowEvHandlerName="OrderNewListRowChangeEventHandler" msprop:Generator_TableClassName="OrderNewListDataTable" msprop:Generator_TableVarName="tableOrderNewList" msprop:Generator_RowDeletingName="OrderNewListRowDeleting" msprop:Generator_TablePropName="OrderNewList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JYUTNO" msprop:Generator_UserColumnName="JYUTNO" msprop:Generator_ColumnVarNameInTable="columnJYUTNO" msprop:Generator_ColumnPropNameInRow="JYUTNO" msprop:Generator_ColumnPropNameInTable="JYUTNOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="JYMEINO" msprop:Generator_UserColumnName="JYMEINO" msprop:Generator_ColumnVarNameInTable="columnJYMEINO" msprop:Generator_ColumnPropNameInRow="JYMEINO" msprop:Generator_ColumnPropNameInTable="JYMEINOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="URMEINO" msprop:Generator_UserColumnName="URMEINO" msprop:Generator_ColumnVarNameInTable="columnURMEINO" msprop:Generator_ColumnPropNameInRow="URMEINO" msprop:Generator_ColumnPropNameInTable="URMEINOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BAITAIKBN" msprop:Generator_UserColumnName="BAITAIKBN" msprop:Generator_ColumnVarNameInTable="columnBAITAIKBN" msprop:Generator_ColumnPropNameInRow="BAITAIKBN" msprop:Generator_ColumnPropNameInTable="BAITAIKBNColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANDCD" msprop:Generator_UserColumnName="BRANDCD" msprop:Generator_ColumnVarNameInTable="columnBRANDCD" msprop:Generator_ColumnPropNameInRow="BRANDCD" msprop:Generator_ColumnPropNameInTable="BRANDCDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANDNM" msprop:Generator_UserColumnName="BRANDNM" msprop:Generator_ColumnVarNameInTable="columnBRANDNM" msprop:Generator_ColumnPropNameInRow="BRANDNM" msprop:Generator_ColumnPropNameInTable="BRANDNMColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KKNAMEKJ" msprop:Generator_UserColumnName="KKNAMEKJ" msprop:Generator_ColumnVarNameInTable="columnKKNAMEKJ" msprop:Generator_ColumnPropNameInRow="KKNAMEKJ" msprop:Generator_ColumnPropNameInTable="KKNAMEKJColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GYOMKBN" msprop:Generator_UserColumnName="GYOMKBN" msprop:Generator_ColumnVarNameInTable="columnGYOMKBN" msprop:Generator_ColumnPropNameInRow="GYOMKBN" msprop:Generator_ColumnPropNameInTable="GYOMKBNColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GYOMKBNKJ" msprop:Generator_UserColumnName="GYOMKBNKJ" msprop:Generator_ColumnVarNameInTable="columnGYOMKBNKJ" msprop:Generator_ColumnPropNameInRow="GYOMKBNKJ" msprop:Generator_ColumnPropNameInTable="GYOMKBNKJColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SEIGAK2" msprop:Generator_UserColumnName="SEIGAK2" msprop:Generator_ColumnVarNameInTable="columnSEIGAK2" msprop:Generator_ColumnPropNameInRow="SEIGAK2" msprop:Generator_ColumnPropNameInTable="SEIGAK2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="SZEIGAK2" msprop:Generator_UserColumnName="SZEIGAK2" msprop:Generator_ColumnVarNameInTable="columnSZEIGAK2" msprop:Generator_ColumnPropNameInRow="SZEIGAK2" msprop:Generator_ColumnPropNameInTable="SZEIGAK2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="SEQ" msprop:Generator_UserColumnName="SEQ" msprop:Generator_ColumnPropNameInRow="SEQ" msprop:Generator_ColumnVarNameInTable="columnSEQ" msprop:Generator_ColumnPropNameInTable="SEQColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderAmountDiffList" msprop:Generator_UserTableName="OrderAmountDiffList" msprop:Generator_RowDeletedName="OrderAmountDiffListRowDeleted" msprop:Generator_RowChangedName="OrderAmountDiffListRowChanged" msprop:Generator_RowClassName="OrderAmountDiffListRow" msprop:Generator_RowChangingName="OrderAmountDiffListRowChanging" msprop:Generator_RowEvArgName="OrderAmountDiffListRowChangeEvent" msprop:Generator_RowEvHandlerName="OrderAmountDiffListRowChangeEventHandler" msprop:Generator_TableClassName="OrderAmountDiffListDataTable" msprop:Generator_TableVarName="tableOrderAmountDiffList" msprop:Generator_RowDeletingName="OrderAmountDiffListRowDeleting" msprop:Generator_TablePropName="OrderAmountDiffList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="JYUTNO" msprop:Generator_UserColumnName="JYUTNO" msprop:Generator_ColumnVarNameInTable="columnJYUTNO" msprop:Generator_ColumnPropNameInRow="JYUTNO" msprop:Generator_ColumnPropNameInTable="JYUTNOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="JYMEINO" msprop:Generator_UserColumnName="JYMEINO" msprop:Generator_ColumnVarNameInTable="columnJYMEINO" msprop:Generator_ColumnPropNameInRow="JYMEINO" msprop:Generator_ColumnPropNameInTable="JYMEINOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="URMEINO" msprop:Generator_UserColumnName="URMEINO" msprop:Generator_ColumnVarNameInTable="columnURMEINO" msprop:Generator_ColumnPropNameInRow="URMEINO" msprop:Generator_ColumnPropNameInTable="URMEINOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BAITAIKBN" msprop:Generator_UserColumnName="BAITAIKBN" msprop:Generator_ColumnVarNameInTable="columnBAITAIKBN" msprop:Generator_ColumnPropNameInRow="BAITAIKBN" msprop:Generator_ColumnPropNameInTable="BAITAIKBNColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANDCD" msprop:Generator_UserColumnName="BRANDCD" msprop:Generator_ColumnVarNameInTable="columnBRANDCD" msprop:Generator_ColumnPropNameInRow="BRANDCD" msprop:Generator_ColumnPropNameInTable="BRANDCDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BRANDNM" msprop:Generator_UserColumnName="BRANDNM" msprop:Generator_ColumnVarNameInTable="columnBRANDNM" msprop:Generator_ColumnPropNameInRow="BRANDNM" msprop:Generator_ColumnPropNameInTable="BRANDNMColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="KKNAMEKJ" msprop:Generator_UserColumnName="KKNAMEKJ" msprop:Generator_ColumnVarNameInTable="columnKKNAMEKJ" msprop:Generator_ColumnPropNameInRow="KKNAMEKJ" msprop:Generator_ColumnPropNameInTable="KKNAMEKJColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GYOMKBN" msprop:Generator_UserColumnName="GYOMKBN" msprop:Generator_ColumnVarNameInTable="columnGYOMKBN" msprop:Generator_ColumnPropNameInRow="GYOMKBN" msprop:Generator_ColumnPropNameInTable="GYOMKBNColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GYOMKBNKJ" msprop:Generator_UserColumnName="GYOMKBNKJ" msprop:Generator_ColumnVarNameInTable="columnGYOMKBNKJ" msprop:Generator_ColumnPropNameInRow="GYOMKBNKJ" msprop:Generator_ColumnPropNameInTable="GYOMKBNKJColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SEIGAK" msprop:Generator_UserColumnName="SEIGAK" msprop:Generator_ColumnVarNameInTable="columnSEIGAK" msprop:Generator_ColumnPropNameInRow="SEIGAK" msprop:Generator_ColumnPropNameInTable="SEIGAKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SZEIGAK" msprop:Generator_UserColumnName="SZEIGAK" msprop:Generator_ColumnVarNameInTable="columnSZEIGAK" msprop:Generator_ColumnPropNameInRow="SZEIGAK" msprop:Generator_ColumnPropNameInTable="SZEIGAKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SEIGAK2" msprop:Generator_UserColumnName="SEIGAK2" msprop:Generator_ColumnVarNameInTable="columnSEIGAK2" msprop:Generator_ColumnPropNameInRow="SEIGAK2" msprop:Generator_ColumnPropNameInTable="SEIGAK2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="SZEIGAK2" msprop:Generator_UserColumnName="SZEIGAK2" msprop:Generator_ColumnVarNameInTable="columnSZEIGAK2" msprop:Generator_ColumnPropNameInRow="SZEIGAK2" msprop:Generator_ColumnPropNameInTable="SZEIGAK2Column" type="xs:int" minOccurs="0" />
+              <xs:element name="SEQ" msprop:Generator_UserColumnName="SEQ" msprop:Generator_ColumnPropNameInRow="SEQ" msprop:Generator_ColumnVarNameInTable="columnSEQ" msprop:Generator_ColumnPropNameInTable="SEQColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

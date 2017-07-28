@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Parameter SystemCode="HB000000">
+
+  <!--**************************************************************-->
+  <!-- セキュリティ関連定義                                       　-->
+  <!--**************************************************************-->
+  <!-- NJSecurityで使用するSecurityContextFactory情報を格納します。 -->
+  <!--
+  <Item Name="SecurityContextFactoryClassName" Value="Isid.NJSecurity.Core.Dummy.DummyUserSecurityContextFactory"/>
+  -->
+  <Item Name="SecurityContextFactoryClassName" Value="Isid.NJSecurity.Core.Impl.WebServiceSecurityContextFactory"/>
+  <!-- NJSecurityServiceのURL　-->
+  <!-- 開発環境　-->
+  <Item Name="NjSecurityServiceUrl" Value="http://localhost:8080/kkh/services/NjSecurityService"/>
+
+  <!-- 総合環境　-->
+  <!--
+  <Item Name="NjSecurityServiceUrl" Value="http://wlsntv07t.dentsu.co.jp:9516/kkh/services/NjSecurityService"/>
+  -->
+  
+  <!-- 本番環境　-->
+  <!--
+  <Item Name="NjSecurityServiceUrl" Value="http://d-hbaed/kkh/services/NjSecurityService"/>
+  <Item Name="NjSecurityServiceUrl" Value="http://hbaed101h/kkh/services/NjSecurityService"/>
+  -->
+  <!-- NJSecurityServiceに接続時のタイムアウトまでの時間(ms) -->
+  <Item Name="NjSecurityServiceTimeout" Value="5000"/>
+  <!-- DummySecurity設定Xmlファイルへのパス(本番では不要) -->
+  <Item Name="DummySecurityXmlFilePath" Value="..\..\Runtime\DummySecurity.xml"/>
+  <!-- NJSecurity認証時アプリＩＤ -->
+  <Item Name="SecurityAppId" Value="S0114401"/>
+  <!-- NJSecurity認証時アプリＩＤ（業務会計）-->
+  <Item Name="AccountSecurityAppId" Value="EC000000"/>
+  <!--**************************************************************-->
+  <!-- 帳票関連定義                                       　        -->
+  <!--**************************************************************-->
+  <!-- 帳票ファイルのWorkフォルダ　-->
+  <Item Name="ReportWorkFolderPath" Value="C:\temp"/>
+  <!-- Excel起動のリトライ回数 -->
+  <Item Name="ExcelStartRetryCount" Value="3"/>
+
+</Parameter>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ErrorMessage SystemCode="CSFW">
+  <Error ID="CS-0001-I" ErrType="E" ErrString="hostの名前は空白できません。"/>
+  <Error ID="CS-0002-I" ErrType="E" ErrString="サーバーに接続時、エラー発生しました"/>
+  <Error ID="CS-0003-I" ErrType="E" ErrString="アプリ二重起動できない。"/>
+  <Error ID="CS-0004-I" ErrType="E" ErrString="ユーザーIDの値は空白できません。"/>
+  <!--Exception begin-->
+  <Error ID="CS-0001-E" ErrType="E" ErrString="CS-0001-E 認証時、エラー発生しました" />
+  <Error ID="CS-0002-E" ErrType="E" ErrString="CS-0002-E 認証時、エラー発生しました" />
+  <Error ID="CS-0003-E" ErrType="E" ErrString="CS-0003-E 認証時、エラー発生しました" />
+  <Error ID="CS-0004-E" ErrType="E" ErrString="CS-0004-E 認証時、エラー発生しました" />
+  <Error ID="CS-0005-E" ErrType="E" ErrString="CS-0005-E 認証時、エラー発生しました" />
+  <Error ID="CS-0006-E" ErrType="E" ErrString="CS-0006-E 認証時、エラー発生しました" />
+  <Error ID="CS-0007-E" ErrType="E" ErrString="CS-0007-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0008-E" ErrType="E" ErrString="CS-0008-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0009-E" ErrType="E" ErrString="CS-0009-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0010-E" ErrType="E" ErrString="CS-0010-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0011-E" ErrType="E" ErrString="CS-0011-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0012-E" ErrType="E" ErrString="CS-0012-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0013-E" ErrType="E" ErrString="CS-0013-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0014-E" ErrType="E" ErrString="CS-0014-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0015-E" ErrType="E" ErrString="CS-0015-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0016-E" ErrType="E" ErrString="CS-0016-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0017-E" ErrType="E" ErrString="CS-0017-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0018-E" ErrType="E" ErrString="CS-0018-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0019-E" ErrType="E" ErrString="CS-0019-E 画面遷移時、エラー発生しました" />
+  <Error ID="CS-0020-E" ErrType="E" ErrString="CS-0020-E アプリケーションが稼働している時、エラー発生しました" />
+  <Error ID="CS-0021-E" ErrType="E" ErrString="CS-0021-E アプリケーションが稼働している時、エラー発生しました" />
+  <Error ID="CS-0022-E" ErrType="E" ErrString="CS-0022-E アプリケーションが稼働している時、エラー発生しました" />
+  <Error ID="CS-0023-E" ErrType="E" ErrString="CS-0023-E アプリケーションが稼働している時、エラー発生しました" />
+  <Error ID="CS-0024-E" ErrType="E" ErrString="CS-0024-E アプリケーションが稼働している時、エラー発生しました" />
+  <Error ID="CS-0025-E" ErrType="E" ErrString="CS-0025-E アプリケーションが稼働している時、エラー発生しました" />
+  <Error ID="CS-0026-E" ErrType="E" ErrString="CS-0026-E アプリケーションが稼働している時、エラー発生しました" />
+  <Error ID="CS-0027-E" ErrType="E" ErrString="CS-0027-E アプリケーションが稼働している時、エラー発生しました" />
+  <Error ID="CS-0001-H" ErrType="E" ErrString="CS-0001-H サーバーに接続時、エラー発生しました" />
+  <Error ID="CS-0002-H" ErrType="E" ErrString="CS-0002-H サーバーに接続時、エラー発生しました" />
+  <!--Exception end-->
+</ErrorMessage>

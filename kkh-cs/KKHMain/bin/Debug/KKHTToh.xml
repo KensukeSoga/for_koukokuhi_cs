@@ -1,0 +1,1139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KKHTToh</name>
+    </assembly>
+    <members>
+        <member name="T:Isid.KKH.Toh.ProcessController.Parser.ReportTohParser">
+            <summary>
+            レポート（TOH)サービスパーサー
+            </summary>
+            <remarks>
+              修正管理 
+              <list type="table">
+                <listheader>
+                  <description>日付</description>
+                  <description>修正者</description>
+                  <description>内容</description>
+                </listheader>
+                <item>
+                  <description>2011/11/15</description>
+                  <description>IP H.Shimizu</description>
+                  <description>新規作成</description>
+                </item>
+              </list>
+            </remarks>
+        </member>
+        <member name="M:Isid.KKH.Toh.ProcessController.Parser.ReportTohParser.ParseForFindReportTohByCond(Isid.KKH.Common.KKHServiceProxy.reportTohResult)">
+            <summary>
+            検索パース結果を取得します。 
+            </summary>
+            <param name="result">マスタ検索結果</param>
+            <returns>マスタ検索パース結果</returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.ProcessController.Parser.ReportTohParser.ParseForFindReportTohTotalByCond(Isid.KKH.Common.KKHServiceProxy.reportTohTotalResult)">
+            <summary>
+            検索パース結果を取得します。 
+            </summary>
+            <param name="result">マスタ検索結果</param>
+            <returns>マスタ検索パース結果</returns>
+        </member>
+        <member name="T:Isid.KKH.Toh.View.Mast.frmMastToh">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Mast.frmMastToh.components">
+            <summary>
+            必要なデザイナ変数です。
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Mast.frmMastToh.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Mast.frmMastToh.InitializeComponent">
+            <summary>
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Mast.frmMastToh.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Mast.frmMastToh.frmMastToh_ProcessAffterNavigating(System.Object,Isid.NJ.View.Base.NavigationEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="T:Isid.KKH.Toh.Schema.DetailDSToh">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.Schema.DetailDSToh.KkhDetailDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.Schema.DetailDSToh.KkhDetailRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.Schema.DetailDSToh.KkhDetailRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.View.Top.frmTopMenuToh">
+            <summary>
+            トップメニュー画面（toh)
+            </summary>
+            <remarks>
+              修正管理 
+              <list type="table">
+                <listheader>
+                  <description>日付</description>
+                  <description>修正者</description>
+                  <description>内容</description>
+                </listheader>
+                <item>
+                  <description></description>
+                  <description></description>
+                  <description>新規作成</description>
+                </item>
+              </list>
+            </remarks>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Top.frmTopMenuToh.#ctor">
+            <summary>
+            コンストラクタ 
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Top.frmTopMenuToh.frmTopMenuToh_ProcessAffterNavigating(System.Object,Isid.NJ.View.Base.NavigationEventArgs)">
+            <summary>
+            画面ProcessAffterNavigating
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Top.frmTopMenuToh.btnAccount_PopupButtonClick(System.Object,Isid.KKH.Common.KKHView.Common.Control.MenuButton.PopupButtonClickEventArgs)">
+            <summary>
+            帳票PopupButtonClick 
+            </summary>
+            <param name="sender"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Top.frmTopMenuToh.btnMasterMaintenance_PopupButtonClick(System.Object,Isid.KKH.Common.KKHView.Common.Control.MenuButton.PopupButtonClickEventArgs)">
+            <summary>
+            [マスター]ボタンPopupButtonClickイベント  
+            </summary>
+            <param name="sender"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Top.frmTopMenuToh.frmTopMenuToh_Load(System.Object,System.EventArgs)">
+            <summary>
+            Loadイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Top.frmTopMenuToh.btnMast_Click(System.Object,System.EventArgs)">
+            <summary>
+            マスターボタンClickイベント 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Top.frmTopMenuToh.MouseMoveCommon(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            MouseMoveイベント 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Top.frmTopMenuToh.MouseLeaveCommon(System.Object,System.EventArgs)">
+            <summary>
+            MouseLeaveイベント 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Top.frmTopMenuToh.components">
+            <summary>
+            必要なデザイナ変数です。
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Top.frmTopMenuToh.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Top.frmTopMenuToh.InitializeComponent">
+            <summary>
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.ProcessController.ReportTohProcessController">
+            <summary>
+            帳票（TOH）プロセスコントローラ
+            </summary>
+            <remarks>
+              修正管理 
+              <list type="table">
+                <listheader>
+                  <description>日付</description>
+                  <description>修正者</description>
+                  <description>内容</description>
+                </listheader>
+                <item>
+                  <description>2011/12/15</description>
+                  <description>JSE KT</description>
+                  <description>新規作成</description>
+                </item>
+              </list>
+            </remarks>
+        </member>
+        <member name="F:Isid.KKH.Toh.ProcessController.ReportTohProcessController._processController">
+            <summary>
+            マスタプロセスコントローラ 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.ProcessController.ReportTohProcessController._adapter">
+            <summary>
+            マスタサービスアダプター 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.ProcessController.ReportTohProcessController._dsRep">
+            <summary>
+            データセット 
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.ProcessController.ReportTohProcessController.#ctor">
+            <summary>
+            コンストラクタです。 
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.ProcessController.ReportTohProcessController.GetInstance">
+            <summary>
+            コードマスタプロセスコントローラのインスタンスを取得します。 
+            </summary>
+            <returns>コードマスタプロセスコントローラのインスタンス</returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.ProcessController.ReportTohProcessController.FindRepTohByCond(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            帳票（東宝・請求明細一覧）データ検索 
+            </summary>
+            <returns>検索サービス結果</returns>
+            
+        </member>
+        <member name="M:Isid.KKH.Toh.ProcessController.ReportTohProcessController.FindRepTohTotalByCond(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            帳票（年月別媒体別集計）データ検索 
+            </summary>
+            <param name="esqId"></param>
+            <param name="egCd"></param>
+            <param name="tksKgyCd"></param>
+            <param name="bmn"></param>
+            <param name="tnt"></param>
+            <param name="year"></param>
+            <param name="nohinKbn"></param>
+            <returns>検索サービス結果</returns>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.REP_KEY_SYBT">
+            <summary>
+            REP_KEY_SYBT：002
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.APLID">
+            <summary>
+            アプリID
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal._naviParam">
+            <summary>
+            呼び出しパラメータ(受取) 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal._strmacrodel">
+            <summary>
+            コピーマクロ削除用string 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.pStrRepTempAdrs">
+            <summary>
+            保存先用(テンプレート)変数.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.pStrRepAdrs">
+            <summary>
+            保存先用変数.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.pStrRepFilNam">
+            <summary>
+            帳票名（保存で使用）用変数.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.tohds">
+            <summary>
+            保持用データセット.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.REP_XML_FILENAME">
+            <summary>
+            XMLファイル名1.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.REP_XML2_FILENAME">
+            <summary>
+            XMLファイル名2.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.REP_TEMPLATE_FILENAME">
+            <summary>
+            Excel(帳票出力マクロ実装)ファイル名.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.REP_MACRO_FILENAME">
+            <summary>
+            Excel(帳票出力マクロ実装)ファイル名.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.TABLENAME">
+            <summary>
+            テーブル名.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.BAITAI_ROW">
+            <summary>
+            媒体列位置 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.KOUMOKU_ROW">
+            <summary>
+            項目列位置 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.MONTH_JAN_ROW">
+            <summary>
+            月列位置（１月） 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.SUM_ROW">
+            <summary>
+            総計列位置 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.KIN_FORMAT">
+            <summary>
+            金額フォーマット 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.DAN_FORMAT">
+            <summary>
+            段数フォーマット 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.WAK_FORMAT">
+            <summary>
+            枠数フォーマット 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportTohTotal.KIN_MIN_WIDTH">
+            <summary>
+            金額最低幅 
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.#ctor">
+            <summary>
+            初期処理 
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.btnSrc_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.btnXls_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.btnEnd_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.ReportToh_ProcessAffterNavigating(System.Object,Isid.NJ.View.Base.NavigationEventArgs)">
+            <summary>
+            初期処理 
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.btnHlp_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.condChg(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.GetRecord">
+            <summary>
+            CSVファイル作成メソッド.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.setBaitaiData(Isid.KKH.Toh.ProcessController.FindReportTohByCondServiceResult,System.Int32,System.Int32,System.Boolean,System.Double@,System.Double@,System.Double@,System.Double[]@,System.Double[]@,System.Double[]@)">
+            <summary>
+            媒体毎データ設定処理 
+            </summary>
+            <param name="result">データセット</param>
+            <param name="i">データセットカウント</param>
+            <param name="setCol">セルへの設定行位置</param>
+            <param name="isChuoFlg">中央紙フラグ</param>
+            <param name="baitaiKinSum">媒体毎金額合計</param>
+            <param name="baitaiDanSum">媒体毎段数合計</param>
+            <param name="baitaiWakSum">媒体毎枠数合計</param>
+            <param name="monthKinSum">月毎金額総計</param>
+            <param name="monthDanSum">月毎段数総計</param>
+            <param name="monthWakSum">月毎枠数総計</param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.setMonthSum(System.Int32@,System.Double[]@,System.Double[]@,System.Double[]@)">
+            <summary>
+            月毎総計設定 
+            </summary>
+            <param name="setCol">セルへの設定行位置</param>
+            <param name="monthKinSum">媒体毎金額合計</param>
+            <param name="monthDanSum">媒体毎段数合計</param>
+            <param name="monthWakSum">媒体毎枠数合計</param>
+            <returns>true</returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.setAutoSize">
+            <summary>
+            金額幅自動設定処理 
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.ExcelOut(System.String)">
+            <summary>
+            Excel出力メソッド.
+            </summary>
+            <param name="filnm">ファイル</param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportTohTotal.getHostDate">
+            <summary>
+            営業日を取得 
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバ "F:Isid.KKH.Toh.View.Report.ReportTohTotal.components" で無視されました -->
+        <!-- 正しくない形式の XML コメントがメンバ "M:Isid.KKH.Toh.View.Report.ReportTohTotal.Dispose(System.Boolean)" で無視されました -->
+        <!-- 正しくない形式の XML コメントがメンバ "M:Isid.KKH.Toh.View.Report.ReportTohTotal.InitializeComponent" で無視されました -->
+        <member name="T:Isid.KKH.Toh.View.Detail.DetailInputToh">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailInputToh.NOUHINKBN_SYBT">
+            <summary>
+            納品区分種別：006
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailInputToh.NOUHINKBN_FIELD1">
+            <summary>
+            納品区分（1：映画、2：演劇）：NOUHINKBN
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.#ctor">
+            <summary>
+            コンストラクタ.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.btnOK_Click(System.Object,System.EventArgs)">
+            <summary>
+            ＯＫボタンクリックイベント.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.btnCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            キャンセルボタンクリックイベント.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.DetailInputToh_Load(System.Object,System.EventArgs)">
+            <summary>
+            フォームロードイベント,
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.InitializeControl">
+            <summary>
+            各コントロールの初期表示処理,
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.editControl">
+            <summary>
+            各コントロールの編集処理.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.DetailInputToh_ProcessAffterNavigating(System.Object,Isid.NJ.View.Base.NavigationEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.space2ConversionMethod(System.String)">
+            <summary>
+            スペース２変換処理.
+            
+            ①スペースの内容を以下の通り変換.
+            ・全角⇒半角、大文字⇒小文字に変換.
+            ・0～9、dx/*.×÷以外の文字・記号を削除.
+            
+            ②*、/ の有無により、以下の通り計算する.
+            ・*、/ あり.
+                ⇒計算パターン：(X * Y / Z).
+            ・* あり.
+                ⇒計算パターン：(X * Y).
+            ・/ あり.
+                ⇒計算パターン：(Y / Z).
+            ・*、/ なし.
+                ⇒計算パターンなし かつ 数値.
+                    ⇒スペースの内容を返却.
+                ⇒数値以外.
+                    ⇒ブランク.
+            </summary>
+            <param name="space">スペース２変換元文字列</param>
+            <returns>スペース２変換後文字列</returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.IsSpace2Check(System.String)">
+            <summary>
+            スペース２数値チェック処理.
+            
+            ①以下のチェックを実施.
+            ・スペース２に入力あり かつ.
+            　スペース２が数値.
+            　⇒true
+            ・上記以外.
+            　⇒false
+            </summary>
+            <param name="space2">スペース２</param>
+            <returns>チェック結果</returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.IsDateTime(System.String)">
+            <summary>
+            パラメータの値が日付かチェックする.
+            </summary>
+            <param name="paramString">チェック対象の文字列</param>
+            <returns>
+            ture    : 日付.
+            false   : 日付以外.
+            </returns>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailInputToh.components">
+            <summary>
+            必要なデザイナ変数です。 
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailInputToh.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。 
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバ "M:Isid.KKH.Toh.View.Detail.DetailInputToh.InitializeComponent" で無視されました -->
+        <!-- 正しくない形式の XML コメントがメンバ "T:Isid.KKH.Toh.Properties.Resources" で無視されました -->
+        <!-- 正しくない形式の XML コメントがメンバ "P:Isid.KKH.Toh.Properties.Resources.ResourceManager" で無視されました -->
+        <!-- 正しくない形式の XML コメントがメンバ "P:Isid.KKH.Toh.Properties.Resources.Culture" で無視されました -->
+        <!-- 正しくない形式の XML コメントがメンバ "P:Isid.KKH.Toh.Properties.Resources.Toh_Mcr" で無視されました -->
+        <!-- 正しくない形式の XML コメントがメンバ "P:Isid.KKH.Toh.Properties.Resources.Toh_Tmp" で無視されました -->
+        <member name="T:Isid.KKH.Toh.ProcessController.FindReportTohByCondServiceResult">
+            <summary>
+            レポート（TOH)検索サービス結果 
+            </summary>
+            <remarks>
+              修正管理 
+              <list type="table">
+                <listheader>
+                  <description>日付</description>
+                  <description>修正者</description>
+                  <description>内容</description>
+                </listheader>
+                <item>
+                  <description>2011/02/03</description>
+                  <description>HLC K.Honma</description>
+                  <description>新規作成</description>
+                </item>
+              </list>
+            </remarks>
+        </member>
+        <member name="F:Isid.KKH.Toh.ProcessController.FindReportTohByCondServiceResult._dsRepToh">
+            <summary>
+            汎用データセットです。 
+            </summary>
+        </member>
+        <member name="P:Isid.KKH.Toh.ProcessController.FindReportTohByCondServiceResult.dsRepTohDataSet">
+            <summary>
+            汎用データセットを取得または設定します。 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.APLID">
+            <summary>
+            アプリID
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_KENMEI">
+            <summary>
+            件名列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_BAITAINM">
+            <summary>
+            媒体名列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_RYOUKIN">
+            <summary>
+            料金列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_SHOHIZEI">
+            <summary>
+            消費税率列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_SPACE">
+            <summary>
+            スペース列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_SPACE2">
+            <summary>
+            スペース２列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_TANKA">
+            <summary>
+            単価列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_KBN">
+            <summary>
+            区分列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_KEISAIDT">
+            <summary>
+            掲載日列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_BAITAICD">
+            <summary>
+            媒体コード列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_JYUTNO">
+            <summary>
+            受注NO列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_JYMEINO">
+            <summary>
+            受注明細NO列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_URMEINO">
+            <summary>
+            売上明細NO列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_KENMEICHGFLG">
+            <summary>
+            件名変更FLG列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_NOUHINKBN">
+            <summary>
+            納品区分列インデックス.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.COLIDX_MLIST_WAKFLG">
+            <summary>
+            枠フラグインデックス.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.#ctor">
+            <summary>
+            コンストラクタ.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.InitDesignForSpdJyutyuListSpread">
+            <summary>
+            スプレッド全体に対する初期表示の設定を行う.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.InitDesignForSpdJyutyuListColumns(FarPoint.Win.Spread.Column)">
+            <summary>
+            スプレッドの列に対する初期表示の設定を行う.
+            </summary>
+            <param name="col"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.VisibleColumns">
+            <summary>
+            得意先別に表示対象外列の非表示処理を行う.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.ChangeColor">
+            <summary>
+            セルの色付け処理を行う.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.DisplayKkhDetail(System.Int32)">
+            <summary>
+            広告費明細データの検索・表示.
+            </summary>
+            <param name="rowIdx"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.CheckBeforeSearch">
+            <summary>
+            受注登録内容検索前チェック処理.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.InitializeBeforeSearch">
+            <summary>
+            受注登録内容検索前クリア処理.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.CheckAfterSearch">
+            <summary>
+            受注登録内容検索後チェック処理.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.InitializeAfterSearch">
+            <summary>
+            受注登録内容検索後初期表示処理.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.CheckBeforeDelJyutyu">
+            <summary>
+            受注削除処理実行前チェック.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.InitAfterDelJyutyu">
+            <summary>
+            受注削除後の初期化処理.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.CheckBeforeYmChange">
+            <summary>
+            年月変更処理実行前チェック.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.CheckBeforeRegJyutyu">
+            <summary>
+            新規作成ダイアログ表示前チェック.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.MouseMoveCommon(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            MouseMoveイベント.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.MouseLeaveCommon(System.Object,System.EventArgs)">
+            <summary>
+            MouseLeaveイベント.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.EnableChangeForSelectJyutyuListRow(FarPoint.Win.Spread.SheetView,System.Int32)">
+            <summary>
+            受注登録内容(一覧)でフォーカスがあるビューによってコントロールの制御を行う.
+            </summary>
+            <param name="activeSheet">アクティブのシート</param>
+            <param name="activeRow">アクティブ行Index</param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.tabHed_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            受注スプレッドタブを変更イベント.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.UpdateCheckClick">
+            <summary>
+            受注チェック.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.DetailToh_ProcessAffterNavigating(System.Object,Isid.NJ.View.Base.NavigationEventArgs)">
+            <summary>
+            画面遷移するたびに発生します。.
+            </summary>
+            <param name="sender">遷移元フォーム</param>
+            <param name="arg">イベントデータ</param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.DetailToh_Shown(System.Object,System.EventArgs)">
+            <summary>
+            フォームロードイベント.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.btnDetailInput_Click(System.Object,System.EventArgs)">
+            <summary>
+            明細入力ボタンクリック.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.btnDivide_Click(System.Object,System.EventArgs)">
+            <summary>
+            分割ボタンクリック.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.btnDetailRegister_Click(System.Object,System.EventArgs)">
+            <summary>
+            明細登録ボタンクリックイベント.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.btnBulkRegister_Click(System.Object,System.EventArgs)">
+            <summary>
+            一括ボタンクリック.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.btnDetailDel_Click(System.Object,System.EventArgs)">
+            <summary>
+            明細削除ボタン押下時.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.btnHlp_Click(System.Object,System.EventArgs)">
+            <summary>
+            ヘルプボタンクリック.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.CalculateSagaku(Isid.KKH.Common.KKHSchema.Detail.JyutyuDataRow)">
+            <summary>
+            差額計算.
+            </summary>
+            <param name="dataRow"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.UpdateDataSourceByDetailDataSetToh(Isid.KKH.Toh.Schema.DetailDSToh)">
+            <summary>
+            広告費明細のデータソース更新.
+            </summary>
+            <param name="dsDetailToh"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.InitializeControlToh">
+            <summary>
+            各コントロールの初期設定.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.InitializeDesignForSpdKkhDetail">
+            <summary>
+            広告費明細スプレッドのデザイン初期化を行う.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.EnableChangeForAfterSearch">
+            <summary>
+            受注登録内容検索後の各コントロールの活性／非活性設定.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.RegistDetailData">
+            <summary>
+            明細登録処理.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.GetMaxUpdDateByTogo(System.Int32,System.DateTime)">
+            <summary>
+            統合されている受注登録内容のデータから更新日付の最大値を取得する。.
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="parentMaxUpdDate"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Detail.DetailToh.components">
+            <summary>
+            必要なデザイナ変数です。
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Detail.DetailToh.InitializeComponent">
+            <summary>
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.ProcessController.Parser.FindReportTohByCondParseResult._dsDetail">
+            <summary>
+            広告費明細入力データセットです。 
+            </summary>
+        </member>
+        <member name="P:Isid.KKH.Toh.ProcessController.Parser.FindReportTohByCondParseResult.ReoTohDataSet">
+            <summary>
+            広告費明細入力データセットを取得または設定します。 
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.View.Report.ReportToh">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh.APLID">
+            <summary>
+            アプリID
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh.components">
+            <summary>
+            必要なデザイナ変数です。 
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。 
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバ "M:Isid.KKH.Toh.View.Report.ReportToh.InitializeComponent" で無視されました -->
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh._naviParam">
+            <summary>
+            呼び出しパラメータ(受取).
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh._dbSyohizei">
+            <summary>
+            消費税.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh._strmacrodel">
+            <summary>
+            コピーマクロ削除用string.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh.pStrRepTempAdrs">
+            <summary>
+            保存先用(テンプレート)変数.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh.pStrRepAdrs">
+            <summary>
+            保存先用変数.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh.pStrRepFilNam">
+            <summary>
+            帳票名（保存で使用）用変数.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh.tohds">
+            <summary>
+            保持用データセット.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh.REP_XML_FILENAME">
+            <summary>
+            XMLファイル名1.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh.REP_XML2_FILENAME">
+            <summary>
+            XMLファイル名2.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh.REP_TEMPLATE_FILENAME">
+            <summary>
+            Excel(帳票出力マクロ実装)ファイル名.
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.View.Report.ReportToh.REP_MACRO_FILENAME">
+            <summary>
+            Excel(帳票出力マクロ実装)ファイル名.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.#ctor">
+            <summary>
+            コンストラクタ.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.btnSrc_Click(System.Object,System.EventArgs)">
+            <summary>
+            検索ボタン押下時.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.rdoKenmei_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.rdoBaitai_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.ReportToh_ProcessAffterNavigating(System.Object,Isid.NJ.View.Base.NavigationEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.btnXls_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.btnEnd_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.btnHlp_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.condChg(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.getHostDate">
+            <summary>
+            営業日を取得.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.GetRecord">
+            <summary>
+            レコード取得.
+            </summary>
+        </member>
+        <member name="M:Isid.KKH.Toh.View.Report.ReportToh.ExcelOut(System.String)">
+            <summary>
+            Excel出力メソッド.
+            </summary>
+            <param name="filnm">ファイル</param>
+        </member>
+        <member name="F:Isid.KKH.Toh.Utility.KKHLogUtilityToh.KINO_ID_OPERATION_LOG_Report">
+            <summary>
+            機能ID （オペレーションログ－請求明細一覧） 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.Utility.KKHLogUtilityToh.KINO_ID_OPERATION_LOG_Total">
+            <summary>
+            機能ID （オペレーションログ－年月別媒体別集計） 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.Utility.KKHLogUtilityToh.KINO_ID_OPERATION_LOG_UpdCheck">
+            <summary>
+            機能ID （オペレーションログ－受注チェック） 
+            </summary>
+        </member>
+        <member name="F:Isid.KKH.Toh.Utility.KKHLogUtilityToh.DESC_OPERATION_LOG_Report">
+            <summary>
+            内容（オペレーションログ－請求明細一覧） 
+            </summary>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバ "F:Isid.KKH.Toh.Utility.KKHLogUtilityToh.DESC_OPERATION_LOG_Total" で無視されました -->
+        <!-- 正しくない形式の XML コメントがメンバ "F:Isid.KKH.Toh.Utility.KKHLogUtilityToh.DESC_OPERATION_LOG_UpdCheck" で無視されました -->
+        <member name="T:Isid.KKH.Toh.Schema.RepDsToh">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.Schema.RepDsToh.ReptohTotalDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.Schema.RepDsToh.ReptohDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.Schema.RepDsToh.ReptohRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.Schema.RepDsToh.ReptohTotalRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.Schema.RepDsToh.ReptohRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:Isid.KKH.Toh.Schema.RepDsToh.ReptohTotalRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+    </members>
+</doc>

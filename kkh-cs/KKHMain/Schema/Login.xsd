@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Login" targetNamespace="http://tempuri.org/Login.xsd" xmlns:mstns="http://tempuri.org/Login.xsd" xmlns="http://tempuri.org/Login.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Login" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Login" msprop:Generator_DataSetName="Login">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LoginCustomerData" msprop:Generator_UserTableName="LoginCustomerData" msprop:Generator_RowDeletedName="LoginCustomerDataRowDeleted" msprop:Generator_RowChangedName="LoginCustomerDataRowChanged" msprop:Generator_RowClassName="LoginCustomerDataRow" msprop:Generator_RowChangingName="LoginCustomerDataRowChanging" msprop:Generator_RowEvArgName="LoginCustomerDataRowChangeEvent" msprop:Generator_RowEvHandlerName="LoginCustomerDataRowChangeEventHandler" msprop:Generator_TableClassName="LoginCustomerDataDataTable" msprop:Generator_TableVarName="tableLoginCustomerData" msprop:Generator_RowDeletingName="LoginCustomerDataRowDeleting" msprop:Generator_TablePropName="LoginCustomerData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tksKgyCd" msprop:Generator_UserColumnName="tksKgyCd" msprop:Generator_ColumnPropNameInRow="tksKgyCd" msprop:Generator_ColumnVarNameInTable="columntksKgyCd" msprop:Generator_ColumnPropNameInTable="tksKgyCdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="tksBmnSeqNo" msprop:Generator_UserColumnName="tksBmnSeqNo" msprop:Generator_ColumnPropNameInRow="tksBmnSeqNo" msprop:Generator_ColumnVarNameInTable="columntksBmnSeqNo" msprop:Generator_ColumnPropNameInTable="tksBmnSeqNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="tksTntSeqNo" msprop:Generator_UserColumnName="tksTntSeqNo" msprop:Generator_ColumnPropNameInRow="tksTntSeqNo" msprop:Generator_ColumnVarNameInTable="columntksTntSeqNo" msprop:Generator_ColumnPropNameInTable="tksTntSeqNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="dispTksCd" msprop:Generator_UserColumnName="dispTksCd" msprop:Generator_ColumnPropNameInRow="dispTksCd" msprop:Generator_ColumnVarNameInTable="columndispTksCd" msprop:Generator_ColumnPropNameInTable="dispTksCdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="dispTksName" msprop:Generator_UserColumnName="dispTksName" msprop:Generator_ColumnPropNameInRow="dispTksName" msprop:Generator_ColumnVarNameInTable="columndispTksName" msprop:Generator_ColumnPropNameInTable="dispTksNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="dispTntSikName" msprop:Generator_UserColumnName="dispTntSikName" msprop:Generator_ColumnPropNameInRow="dispTntSikName" msprop:Generator_ColumnVarNameInTable="columndispTntSikName" msprop:Generator_ColumnPropNameInTable="dispTntSikNameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

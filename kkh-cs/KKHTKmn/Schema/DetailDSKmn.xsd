@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DetailDSKmn" targetNamespace="http://tempuri.org/DetailDSKmn.xsd" xmlns:mstns="http://tempuri.org/DetailDSKmn.xsd" xmlns="http://tempuri.org/DetailDSKmn.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DetailDSKmn" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DetailDSKmn" msprop:Generator_DataSetName="DetailDSKmn">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="KkhDetail" msprop:Generator_UserTableName="KkhDetail" msprop:Generator_RowDeletedName="KkhDetailRowDeleted" msprop:Generator_RowChangedName="KkhDetailRowChanged" msprop:Generator_RowClassName="KkhDetailRow" msprop:Generator_RowChangingName="KkhDetailRowChanging" msprop:Generator_RowEvArgName="KkhDetailRowChangeEvent" msprop:Generator_RowEvHandlerName="KkhDetailRowChangeEventHandler" msprop:Generator_TableClassName="KkhDetailDataTable" msprop:Generator_TableVarName="tableKkhDetail" msprop:Generator_RowDeletingName="KkhDetailRowDeleting" msprop:Generator_TablePropName="KkhDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hinmoku1" msprop:Generator_UserColumnName="Hinmoku1" msprop:Generator_ColumnVarNameInTable="columnHinmoku1" msprop:Generator_ColumnPropNameInRow="Hinmoku1" msprop:Generator_ColumnPropNameInTable="Hinmoku1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Hinmoku2" msprop:Generator_UserColumnName="Hinmoku2" msprop:Generator_ColumnVarNameInTable="columnHinmoku2" msprop:Generator_ColumnPropNameInRow="Hinmoku2" msprop:Generator_ColumnPropNameInTable="Hinmoku2Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Hinmoku3" msprop:Generator_UserColumnName="Hinmoku3" msprop:Generator_ColumnVarNameInTable="columnHinmoku3" msprop:Generator_ColumnPropNameInRow="Hinmoku3" msprop:Generator_ColumnPropNameInTable="Hinmoku3Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Himoku1" msprop:Generator_UserColumnName="Himoku1" msprop:Generator_ColumnPropNameInRow="Himoku1" msprop:Generator_ColumnVarNameInTable="columnHimoku1" msprop:Generator_ColumnPropNameInTable="Himoku1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Kikan1" msprop:Generator_UserColumnName="Kikan1" msprop:Generator_ColumnPropNameInRow="Kikan1" msprop:Generator_ColumnVarNameInTable="columnKikan1" msprop:Generator_ColumnPropNameInTable="Kikan1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="BumonCd" msprop:Generator_UserColumnName="BumonCd" msprop:Generator_ColumnPropNameInRow="BumonCd" msprop:Generator_ColumnVarNameInTable="columnBumonCd" msprop:Generator_ColumnPropNameInTable="BumonCdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SeikyuSakiBumon" msprop:Generator_UserColumnName="SeikyuSakiBumon" msprop:Generator_ColumnVarNameInTable="columnSeikyuSakiBumon" msprop:Generator_ColumnPropNameInRow="SeikyuSakiBumon" msprop:Generator_ColumnPropNameInTable="SeikyuSakiBumonColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SeikyuYyyymm" msdata:Caption="SeikyuSakiBumon" msprop:Generator_UserColumnName="SeikyuYyyymm" msprop:Generator_ColumnVarNameInTable="columnSeikyuYyyymm" msprop:Generator_ColumnPropNameInRow="SeikyuYyyymm" msprop:Generator_ColumnPropNameInTable="SeikyuYyyymmColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GokeiKingaku" msprop:Generator_UserColumnName="GokeiKingaku" msprop:Generator_ColumnVarNameInTable="columnGokeiKingaku" msprop:Generator_ColumnPropNameInRow="GokeiKingaku" msprop:Generator_ColumnPropNameInTable="GokeiKingakuColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GokeiZeigaku" msprop:Generator_UserColumnName="GokeiZeigaku" msprop:Generator_ColumnPropNameInRow="GokeiZeigaku" msprop:Generator_ColumnVarNameInTable="columnGokeiZeigaku" msprop:Generator_ColumnPropNameInTable="GokeiZeigakuColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Naiyou" msprop:Generator_UserColumnName="Naiyou" msprop:Generator_ColumnVarNameInTable="columnNaiyou" msprop:Generator_ColumnPropNameInRow="Naiyou" msprop:Generator_ColumnPropNameInTable="NaiyouColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Himoku" msprop:Generator_UserColumnName="Himoku" msprop:Generator_ColumnVarNameInTable="columnHimoku" msprop:Generator_ColumnPropNameInRow="Himoku" msprop:Generator_ColumnPropNameInTable="HimokuColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Kikan" msprop:Generator_UserColumnName="Kikan" msprop:Generator_ColumnVarNameInTable="columnKikan" msprop:Generator_ColumnPropNameInRow="Kikan" msprop:Generator_ColumnPropNameInTable="KikanColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Kingaku" msprop:Generator_UserColumnName="Kingaku" msprop:Generator_ColumnVarNameInTable="columnKingaku" msprop:Generator_ColumnPropNameInRow="Kingaku" msprop:Generator_ColumnPropNameInTable="KingakuColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Zeigaku" msprop:Generator_UserColumnName="Zeigaku" msprop:Generator_ColumnVarNameInTable="columnZeigaku" msprop:Generator_ColumnPropNameInRow="Zeigaku" msprop:Generator_ColumnPropNameInTable="ZeigakuColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Biko" msprop:Generator_UserColumnName="Biko" msprop:Generator_ColumnVarNameInTable="columnBiko" msprop:Generator_ColumnPropNameInRow="Biko" msprop:Generator_ColumnPropNameInTable="BikoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

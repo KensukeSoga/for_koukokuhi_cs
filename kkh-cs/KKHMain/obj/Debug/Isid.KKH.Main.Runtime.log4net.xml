@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<log4net>
+
+  <!-- コンソール出力用 -->
+  <appender name="STDOUT" type="log4net.Appender.ConsoleAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} %5p %c: %m%n" />
+      <!--<param name="ConversionPattern" value="%d [%-5t] %-5p %-63c - %m%n" />-->
+    </layout>
+  </appender>
+
+  <!-- ログファイル出力用 -->
+  <appender name="FILE" type="log4net.Appender.RollingFileAppender">
+    <!-- 出力するファイル(パスを含められる) -->
+    <param name="File" value="CSFramework.log" />
+    <!-- ファイルを追記モードで書き込むか、上書きか? -->
+    <param name="AppendToFile" value="true" />
+    <!-- 最大バックアップファイル数。つまり、MaximumFileSize*MaxSizeRollBackupsのDisk容量が必要-->
+    <param name="MaxSizeRollBackups" value="5" />
+    <!-- Logファイルの最大ファイルサイズ-->
+    <param name="MaximumFileSize" value="1MB" />
+    <!-- 出力ファイルのバックアップを作成するタイミング
+			Once 		変更しない
+			Size 		ファイルサイズ
+			Date 		日付け
+			Composite	Sizeと日付けの両方の設定を利用しLogのバックアップを作成する。
+		-->
+    <param name="RollingStyle" value="Size" />
+    <!-- 出力しているLogファイル名を固定するか否かの設定
+			trueの場合、出力するファイルは固定で、バックアップに.0とか.1とかで数値が大きい方が過去のLogとなる。
+			falseの場合、出力するファイル名に数値がつき、数値が大きいほうが現在のファイルとなる。
+			RollingStyleがSizeの場合動作しないっぽい
+		-->
+    <param name="StaticLogFileName" value="true" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} %5p %c: %m%n" />
+      <!--<param name="ConversionPattern" value="%d [%-5t] %-5p %-63c - %m%n" />-->
+    </layout>
+  </appender>
+
+  <logger name="Isid" additivity="false">
+    <level value="DEBUG" />
+    <appender-ref ref="FILE" />
+  </logger>
+  
+  <root>
+    <level value="WARN" />
+    <appender-ref ref="STDOUT" />
+  </root>
+
+</log4net>
